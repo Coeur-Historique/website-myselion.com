@@ -24,9 +24,9 @@ const agenda = SITE_VARIABLES.socialLinks?.googleAgenda?.url ?? lien('/contact/'
 const rappel = SITE_VARIABLES.contactData.ringMeUrl ?? lien('/contact/');
 const visuels: Record<string, ImageMetadata> = { 'programme-partenaire-spread': spread, 'ready-set-go-1-hour-setup': readySetGo };
 
-const partenaires = Object.values(
-  import.meta.glob<{ default: ImageMetadata }>('../../assets/partenaires/*.{png,webp}', { eager: true }),
-).map((m) => m.default);
+// Logos officiels (SVG des marques, sinon PNG détouré), présentés en tuiles carrées identiques.
+const fichiersLogos = import.meta.glob<{ default: ImageMetadata }>('../../assets/partenaires/*.{svg,png}', { eager: true });
+const logo = (fichier: string) => fichiersLogos[`../../assets/partenaires/${fichier}`]?.default;
 
 const derniers = (await getCollection('blog', (a) => getBlogEntryLocale(a.id) === lang))
   .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
@@ -180,9 +180,19 @@ const date = (d: Date) => d.toLocaleDateString(`${lang}-BE`, { day: 'numeric', m
 <section class="py-5 bg-white">
   <div class="container">
     <h2 class="titre-section text-center">{L.partenaires.titre}</h2>
-    <ul class="partenaires">
-      {partenaires.map((logo) => <li><Image src={logo} alt="" width={120} /></li>)}
-    </ul>
+    {L.partenaires.groupes.map((g) => (
+      <>
+        <h3 class="groupe-partenaires">{g.nom}</h3>
+        <ul class="partenaires">
+          {g.logos.map(([nom, fichier]) => (
+            <li>
+              <span class="tuile">{logo(fichier) && <Image src={logo(fichier)!} alt={nom} width={160} />}</span>
+              <span class="nom">{nom}</span>
+            </li>
+          ))}
+        </ul>
+      </>
+    ))}
   </div>
 </section>
 
@@ -414,19 +424,56 @@ const date = (d: Date) => d.toLocaleDateString(`${lang}-BE`, { day: 'numeric', m
       grid-template-columns: repeat(4, 1fr);
     }
   }
+  .groupe-partenaires {
+    margin: 2rem 0 1rem;
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-align: center;
+    color: #64748b;
+  }
   .partenaires {
     list-style: none;
     padding: 0;
-    margin: 1.5rem 0 0;
+    margin: 0;
     display: flex;
     flex-wrap: wrap;
-    gap: 1.5rem;
+    gap: 1.25rem;
     justify-content: center;
-    align-items: center;
   }
-  .partenaires :global(img) {
-    width: 96px;
-    height: 96px;
+  .partenaires li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    width: 7.5rem;
+  }
+  .tuile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 7.5rem;
+    height: 7.5rem;
+    padding: 1.1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 1.5rem;
+    background: #fff;
+    box-shadow: 0 6px 18px rgba(46, 76, 119, 0.08);
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+  .tuile:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(46, 76, 119, 0.16);
+  }
+  .tuile :global(img) {
+    width: 100%;
+    height: 100%;
     object-fit: contain;
+  }
+  .nom {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #2e4c77;
   }
 </style>

@@ -374,7 +374,100 @@
     ]
   ],
   "partenaires": {
-    "titre": "Ils s'intègrent à mySelion"
+    "titre": "Ils s'intègrent à mySelion",
+    "groupes": [
+      {
+        "nom": "Paiements",
+        "logos": [
+          [
+            "Stripe",
+            "stripe.svg"
+          ],
+          [
+            "SumUp",
+            "sumup.png"
+          ],
+          [
+            "PayPal",
+            "paypal.svg"
+          ],
+          [
+            "Visa",
+            "visa.svg"
+          ],
+          [
+            "Mastercard",
+            "mastercard.svg"
+          ]
+        ]
+      },
+      {
+        "nom": "Banques et assurances",
+        "logos": [
+          [
+            "Belfius",
+            "belfius.png"
+          ],
+          [
+            "BNP Paribas",
+            "bnp-paribas.png"
+          ],
+          [
+            "CBC",
+            "cbc.svg"
+          ],
+          [
+            "ING",
+            "ing.png"
+          ],
+          [
+            "Crelan",
+            "crelan.svg"
+          ],
+          [
+            "AXA",
+            "axa.svg"
+          ],
+          [
+            "Ibanity",
+            "ibanity.png"
+          ]
+        ]
+      },
+      {
+        "nom": "Technologies",
+        "logos": [
+          [
+            "Google Cloud",
+            "googlecloud.svg"
+          ],
+          [
+            "React",
+            "react.svg"
+          ],
+          [
+            "Vue.js",
+            "vue.svg"
+          ],
+          [
+            "PostgreSQL",
+            "postgresql.svg"
+          ],
+          [
+            "MySQL",
+            "mysql.svg"
+          ],
+          [
+            "Debian",
+            "debian.svg"
+          ],
+          [
+            "GitHub",
+            "github.svg"
+          ]
+        ]
+      }
+    ]
   },
   "menu": {
     "Plateforme": "Plateforme",
