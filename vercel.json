@@ -12,7 +12,17 @@
       "permanent": true
     },
     {
+      "source": "/contactus/",
+      "destination": "/fr/contact/",
+      "permanent": true
+    },
+    {
       "source": "/contactus-thank-you",
+      "destination": "/fr/contact/",
+      "permanent": true
+    },
+    {
+      "source": "/contactus-thank-you/",
       "destination": "/fr/contact/",
       "permanent": true
     },
@@ -22,7 +32,17 @@
       "permanent": true
     },
     {
+      "source": "/legal/",
+      "destination": "/fr/legal/mentions-legales/",
+      "permanent": true
+    },
+    {
       "source": "/privacy",
+      "destination": "/fr/legal/vie-privee/",
+      "permanent": true
+    },
+    {
+      "source": "/privacy/",
       "destination": "/fr/legal/vie-privee/",
       "permanent": true
     },
@@ -32,7 +52,17 @@
       "permanent": true
     },
     {
+      "source": "/cookies/",
+      "destination": "/fr/legal/cookies/",
+      "permanent": true
+    },
+    {
       "source": "/cgu",
+      "destination": "/fr/legal/conditions-generales/",
+      "permanent": true
+    },
+    {
+      "source": "/cgu/",
       "destination": "/fr/legal/conditions-generales/",
       "permanent": true
     },
@@ -42,7 +72,17 @@
       "permanent": true
     },
     {
+      "source": "/cluf/",
+      "destination": "/fr/legal/cluf/",
+      "permanent": true
+    },
+    {
       "source": "/blog",
+      "destination": "/fr/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/",
       "destination": "/fr/blog/",
       "permanent": true
     },
@@ -52,7 +92,17 @@
       "permanent": true
     },
     {
+      "source": "/blog/casus-1/",
+      "destination": "/fr/blog/?categorie=casus",
+      "permanent": true
+    },
+    {
       "source": "/blog/tutoriels-2",
+      "destination": "/fr/blog/?categorie=tutoriels",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tutoriels-2/",
       "destination": "/fr/blog/?categorie=tutoriels",
       "permanent": true
     },
@@ -62,7 +112,17 @@
       "permanent": true
     },
     {
+      "source": "/blog/communaute-3/",
+      "destination": "/fr/blog/?categorie=communaute",
+      "permanent": true
+    },
+    {
       "source": "/blog/:categorie/feed",
+      "destination": "/fr/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/:categorie/feed/",
       "destination": "/fr/blog/",
       "permanent": true
     },
@@ -72,7 +132,17 @@
       "permanent": true
     },
     {
+      "source": "/blog/casus-1/ready-set-go-1-hour-setup-2/",
+      "destination": "/fr/blog/ready-set-go-1-hour-setup/",
+      "permanent": true
+    },
+    {
       "source": "/blog/casus-1/udb-united-database-1",
+      "destination": "/fr/blog/udb-united-database/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/casus-1/udb-united-database-1/",
       "destination": "/fr/blog/udb-united-database/",
       "permanent": true
     },
@@ -82,7 +152,17 @@
       "permanent": true
     },
     {
+      "source": "/blog/communaute-3/programme-partenaire-spread-3/",
+      "destination": "/fr/blog/programme-partenaire-spread/",
+      "permanent": true
+    },
+    {
       "source": "/blog/tutoriels-2/ag0-agents-12",
+      "destination": "/fr/blog/ag0-agents/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tutoriels-2/ag0-agents-12/",
       "destination": "/fr/blog/ag0-agents/",
       "permanent": true
     },
@@ -92,7 +172,17 @@
       "permanent": true
     },
     {
+      "source": "/blog/tutoriels-2/fle-fleet-11/",
+      "destination": "/fr/blog/fle-fleet/",
+      "permanent": true
+    },
+    {
       "source": "/blog/tutoriels-2/pdi-point-d-interet-10",
+      "destination": "/fr/blog/pdi-point-d-interet/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tutoriels-2/pdi-point-d-interet-10/",
       "destination": "/fr/blog/pdi-point-d-interet/",
       "permanent": true
     },
@@ -102,7 +192,17 @@
       "permanent": true
     },
     {
+      "source": "/blog/tutoriels-2/ibn-iban-gestion-des-liaisons-bancaires-9/",
+      "destination": "/fr/blog/ibn-iban-gestion-des-liaisons-bancaires/",
+      "permanent": true
+    },
+    {
       "source": "/blog/tutoriels-2/ctc-contacts-gestion-des-relations-marketing-et-commerciales-8",
+      "destination": "/fr/blog/ctc-contacts-gestion-des-relations-marketing-et-commerciales/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tutoriels-2/ctc-contacts-gestion-des-relations-marketing-et-commerciales-8/",
       "destination": "/fr/blog/ctc-contacts-gestion-des-relations-marketing-et-commerciales/",
       "permanent": true
     },
@@ -112,7 +212,17 @@
       "permanent": true
     },
     {
+      "source": "/blog/tutoriels-2/cef-clients-et-fournisseurs-l-unite-de-liaison-par-defaut-7/",
+      "destination": "/fr/blog/cef-clients-et-fournisseurs-l-unite-de-liaison-par-defaut/",
+      "permanent": true
+    },
+    {
       "source": "/blog/tutoriels-2/usr-utilisateurs-acces-et-droits-des-utilisateurs-6",
+      "destination": "/fr/blog/usr-utilisateurs-acces-et-droits-des-utilisateurs/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tutoriels-2/usr-utilisateurs-acces-et-droits-des-utilisateurs-6/",
       "destination": "/fr/blog/usr-utilisateurs-acces-et-droits-des-utilisateurs/",
       "permanent": true
     },
@@ -122,7 +232,17 @@
       "permanent": true
     },
     {
+      "source": "/blog/tutoriels-2/brd-marques-identite-economique-5/",
+      "destination": "/fr/blog/brd-marques-identite-economique/",
+      "permanent": true
+    },
+    {
       "source": "/blog/tutoriels-2/lcs-licences-gestion-et-organisation-des-licences-4",
+      "destination": "/fr/blog/lcs-licences-gestion-et-organisation-des-licences/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tutoriels-2/lcs-licences-gestion-et-organisation-des-licences-4/",
       "destination": "/fr/blog/lcs-licences-gestion-et-organisation-des-licences/",
       "permanent": true
     }
