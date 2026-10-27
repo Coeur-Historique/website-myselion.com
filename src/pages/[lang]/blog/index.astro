@@ -1,0 +1,145 @@
+---
+// src/pages/[lang]/blog/index.astro — page « Blog » (/fr/blog/, lien du menu du shell).
+// Articles du plus récent au plus ancien, en cartes, filtrables par catégorie (Casus,
+// Tutoriels, Communauté, comme sur l'ancien blog Odoo) ; ?categorie=<cle> présélectionne un filtre.
+import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
+import Page from '../../../layouts/Page.astro';
+import { contenu, localeStaticPaths, type SiteLocale } from '../../../i18n/contenu';
+import { getBlogEntryLocale } from '../../../i18n';
+
+export const getStaticPaths = localeStaticPaths;
+const lang = Astro.params.lang as SiteLocale;
+const L = contenu(lang);
+const articles = (await getCollection('blog', (a) => getBlogEntryLocale(a.id) === lang)).sort(
+  (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime(),
+);
+const cle = (texte: string) => texte.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+const categories = [...new Set(articles.map((a) => a.data.category ?? a.data.segment))];
+const date = (d: Date) => d.toLocaleDateString(`${lang}-BE`, { day: 'numeric', month: 'long', year: 'numeric' });
+---
+
+<Page title={`${L.blog.titre} — mySelion`} description={L.blog.description}>
+  <section class="py-5">
+    <div class="container py-3">
+      <h1 class="titre">{L.blog.titre}</h1>
+      {articles.length === 0 && <p>{L.blog.vide}</p>}
+      <div class="filtres" role="group" aria-label="Catégories">
+        <button type="button" data-filtre="" aria-pressed="true">{L.blog.toutes}</button>
+        {categories.map((c) => <button type="button" data-filtre={cle(c)} aria-pressed="false">{c}</button>)}
+      </div>
+      <div class="row g-4">
+        {articles.map((a) => {
+          const categorie = a.data.category ?? a.data.segment;
+          return (
+            <div class="col-md-6 col-lg-4" data-categorie={cle(categorie)}>
+              <a class="article h-100" href={`/${lang}/blog/${a.data.customSlug ?? a.id}/`}>
+                {a.data.image && <Image src={a.data.image} alt="" width={640} class="article-img" />}
+                <div class="article-corps">
+                  <p class="meta">
+                    <span class="badge-service">{categorie}</span>
+                    <time datetime={a.data.pubDate.toISOString()}>{date(a.data.pubDate)}</time>
+                  </p>
+                  <h2>{a.data.title}</h2>
+                  <p class="resume">{a.data.description}</p>
+                </div>
+              </a>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+</Page>
+
+<script>
+  const boutons = document.querySelectorAll<HTMLButtonElement>('.filtres button');
+  const filtrer = (filtre: string) => {
+    boutons.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.filtre === filtre)));
+    document.querySelectorAll<HTMLElement>('[data-categorie]').forEach((carte) => {
+      carte.hidden = filtre !== '' && carte.dataset.categorie !== filtre;
+    });
+  };
+  boutons.forEach((b) => b.addEventListener('click', () => filtrer(b.dataset.filtre ?? '')));
+  const demande = new URLSearchParams(location.search).get('categorie') ?? '';
+  if ([...boutons].some((b) => b.dataset.filtre === demande)) filtrer(demande);
+</script>
+
+<style>
+  .titre {
+    font-weight: 800;
+    margin-bottom: 2rem;
+  }
+  .article {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #e2e8f0;
+    border-radius: 1rem;
+    overflow: hidden;
+    background: #fff;
+    color: inherit;
+    text-decoration: none;
+    transition: box-shadow 0.2s;
+  }
+  .article:hover {
+    box-shadow: 0 10px 28px rgba(15, 23, 42, 0.1);
+  }
+  .article :global(.article-img) {
+    width: 100%;
+    height: 12rem;
+    object-fit: cover;
+  }
+  .article-corps {
+    padding: 1.1rem 1.2rem 1.3rem;
+  }
+  .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+    font-size: 0.82rem;
+    color: #64748b;
+    margin-bottom: 0.6rem;
+  }
+  .badge-service {
+    padding: 0.15rem 0.55rem;
+    border-radius: 999px;
+    background: var(--brand-red, #4877b9);
+    color: #fff;
+    font-weight: 600;
+  }
+  .filtres {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .filtres button {
+    padding: 0.4rem 1rem;
+    border-radius: 999px;
+    border: 1px solid #4877b9;
+    background: #fff;
+    color: #2e4c77;
+    font-weight: 600;
+  }
+  .filtres button[aria-pressed='true'] {
+    background: #4877b9;
+    color: #fff;
+  }
+  h2 {
+    font-size: 1.15rem;
+    font-weight: 800;
+    line-height: 1.35;
+  }
+  .resume {
+    text-align: justify;
+    hyphens: auto;
+    font-size: 0.92rem;
+    color: #475569;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+</style>

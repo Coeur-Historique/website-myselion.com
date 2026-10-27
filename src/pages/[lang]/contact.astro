@@ -1,0 +1,14 @@
+---
+import Page from '../../layouts/Page.astro';
+import ContactPageContent from '../../components/contact/ContactPageContent.astro';
+import { t } from '../../i18n';
+import { localeStaticPaths, type SiteLocale } from '../../i18n/contenu';
+import { ENTITY_NAME } from '../../site.variables';
+
+export const getStaticPaths = localeStaticPaths;
+const lang = Astro.params.lang as SiteLocale;
+---
+
+<Page title={t('contact.meta.title', lang).replace('{name}', ENTITY_NAME)} description={t('contact.meta.description', lang)}>
+  <ContactPageContent lang={lang} />
+</Page>

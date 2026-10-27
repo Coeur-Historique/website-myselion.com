@@ -1,0 +1,412 @@
+{
+  "meta": {
+    "titre": "mySelion — Tout votre business sur une plateforme",
+    "description": "mySelion : plateforme de gestion complète, intégrée et évolutive. Facturation, achats, comptabilité, TVA et administration, déployée en 1 heure."
+  },
+  "hero": {
+    "titre": "Tout votre business sur une plateforme.",
+    "sousTitre": "Complète, intégrée et évolutive",
+    "badge": "Déploiement en 1 heure",
+    "cta": "Rencontrer un conseiller",
+    "ctaSecondaire": "Voir les offres"
+  },
+  "modules": {
+    "titre": "Tous les modules dont votre entreprise a besoin",
+    "intro": "Une seule plateforme, sans option payante : chaque module est inclus.",
+    "beta": "BETA",
+    "familles": [
+      {
+        "nom": "Ventes",
+        "modules": [
+          [
+            "Devis",
+            "fa6-solid:file-lines"
+          ],
+          [
+            "Ventes système",
+            "fa6-solid:gears"
+          ],
+          [
+            "Ventes récurrentes",
+            "fa6-solid:calendar-days"
+          ],
+          [
+            "Vente inventorisée",
+            "fa6-solid:list-ul"
+          ],
+          [
+            "Factures",
+            "fa6-solid:chart-line"
+          ],
+          [
+            "Notes de crédit",
+            "fa6-solid:file-invoice"
+          ],
+          [
+            "Caisse",
+            "fa6-solid:euro-sign"
+          ],
+          [
+            "Régie",
+            "fa6-solid:life-ring"
+          ]
+        ]
+      },
+      {
+        "nom": "Achats",
+        "modules": [
+          [
+            "Achats",
+            "fa6-solid:cart-arrow-down"
+          ],
+          [
+            "Avoirs",
+            "fa6-solid:file-invoice"
+          ],
+          [
+            "Notes de frais",
+            "fa6-solid:ticket"
+          ]
+        ]
+      },
+      {
+        "nom": "Stock",
+        "modules": [
+          [
+            "Inventaire",
+            "fa6-solid:cube"
+          ],
+          [
+            "Stock",
+            "fa6-solid:cubes"
+          ]
+        ]
+      },
+      {
+        "nom": "Comptabilité et fiscalité",
+        "modules": [
+          [
+            "Historique",
+            "fa6-solid:link-slash"
+          ],
+          [
+            "Justificatifs clients",
+            "fa6-solid:file-pdf"
+          ],
+          [
+            "Justificatifs fournisseurs",
+            "fa6-solid:file-pdf"
+          ],
+          [
+            "Flux bancaires",
+            "fa6-solid:money-bill"
+          ],
+          [
+            "Opérations diverses",
+            "fa6-solid:right-left"
+          ],
+          [
+            "Financiers",
+            "fa6-solid:shuffle"
+          ],
+          [
+            "Balances",
+            "fa6-solid:scale-balanced"
+          ],
+          [
+            "TVA",
+            "fa6-solid:layer-group"
+          ],
+          [
+            "Solde",
+            "fa6-solid:table-columns"
+          ],
+          [
+            "ISOC",
+            "fa6-solid:chart-pie"
+          ]
+        ]
+      },
+      {
+        "nom": "Paie",
+        "modules": [
+          [
+            "Payroll",
+            "fa6-solid:face-smile"
+          ],
+          [
+            "Dirigeants",
+            "fa6-solid:rocket"
+          ]
+        ]
+      },
+      {
+        "nom": "Opérations",
+        "modules": [
+          [
+            "Pointage",
+            "fa6-solid:clock"
+          ],
+          [
+            "QR Dynamique",
+            "fa6-solid:qrcode"
+          ],
+          [
+            "Courriers",
+            "fa6-solid:envelope"
+          ],
+          [
+            "Processus Custom",
+            "fa6-solid:diagram-project"
+          ],
+          [
+            "myS in App",
+            "fa6-solid:forward"
+          ]
+        ]
+      },
+      {
+        "nom": "Administration",
+        "modules": [
+          [
+            "Administration",
+            "fa6-solid:unlock-keyhole"
+          ],
+          [
+            "Catégories",
+            "fa6-solid:table-list"
+          ],
+          [
+            "Agents",
+            "fa6-solid:user"
+          ],
+          [
+            "Fleet",
+            "fa6-solid:car"
+          ],
+          [
+            "Points d'intérêt",
+            "fa6-solid:location-dot"
+          ],
+          [
+            "IBAN",
+            "fa6-solid:building-columns"
+          ],
+          [
+            "Contacts",
+            "fa6-solid:address-card"
+          ],
+          [
+            "Fournisseurs",
+            "fa6-solid:user-tie"
+          ],
+          [
+            "Clients",
+            "fa6-solid:circle-user"
+          ]
+        ]
+      }
+    ]
+  },
+  "simplifier": {
+    "titre": "Simplifiez la gestion et concentrez-vous sur l'action !",
+    "texte": "mySelion vous permet de gérer simplement votre facturation, de centraliser la gestion administrative et de communiquer efficacement.",
+    "points": [
+      "Gagnez du temps dans la gestion de vos devis et factures",
+      "Suivez les paiements clients et automatisez les relances",
+      "Gérez vos factures d’achat et vos notes de frais",
+      "Bénéficiez d'un suivi comptable individualisé"
+    ],
+    "cta": "En savoir plus"
+  },
+  "offres": {
+    "titre": "Une offre adaptée à tous les profils.",
+    "intro": "Une solution adaptée à tous les environnements, développée par des gestionnaires, pour des gestionnaires.",
+    "periode": "/ mois / utilisateur",
+    "note": "Déploiement assisté par nos équipes.",
+    "plans": [
+      {
+        "nom": "Starter",
+        "prix": "9,99 €",
+        "texte": "Idéal pour les nouveaux arrivants. Des fonctionnalités essentielles pour lancer les ventes et le marketing. Parfait pour les starters et freelancers.",
+        "cta": "Démarrer maintenant",
+        "lien": "agenda",
+        "inclus": [
+          "Plateforme de gestion complète",
+          "1 utilisateur unique",
+          "Déploiement en 1 heure",
+          "Blog & Forum",
+          "FAQ",
+          "Support en régie",
+          "Peppol ready",
+          "Training Day - Collectif",
+          "Credit Safe Analytics",
+          "Insight",
+          "Cost Cutting"
+        ]
+      },
+      {
+        "nom": "Professionnel",
+        "prix": "65,00 €",
+        "texte": "Des outils complets pour les entreprises en croissance. Optimisez vos processus et la productivité de votre équipe, accompagné d'un support permanent.",
+        "cta": "Démarrer maintenant",
+        "lien": "agenda",
+        "vedette": true,
+        "inclus": [
+          "Plateforme de gestion complète",
+          "Utilisateurs illimités",
+          "Déploiement en 1 heure",
+          "Blog & Forum",
+          "FAQ",
+          "Ticketing",
+          "Peppol ready",
+          "Training Day - Collectif",
+          "Credit Safe Analytics",
+          "Insight",
+          "Cost Cutting"
+        ]
+      },
+      {
+        "nom": "Business",
+        "prix": "80,00 €",
+        "texte": "Une solution avancée pour les entreprises, bénéficiant d'une approche proactive et d'un suivi personnalisé. Profitez de nos conseils avancés en matière de gestion D2D.",
+        "cta": "Rappel immédiat",
+        "lien": "rappel",
+        "inclus": [
+          "Plateforme de gestion complète",
+          "Utilisateurs illimités",
+          "Déploiement en 1 heure",
+          "Blog & Forum",
+          "FAQ",
+          "Une assistance gratuite 24/7",
+          "Peppol ready",
+          "Training Day - Custom",
+          "Credit Safe Analytics",
+          "Insight",
+          "Cost Cutting"
+        ]
+      }
+    ]
+  },
+  "atouts": {
+    "titre": "Tout ce dont vous avez besoin",
+    "intro": "Une solution par un créateur d'entreprises, pour des entrepreneurs, quelle que soit la taille ou le type d'activité.",
+    "liste": [
+      [
+        "100 % Cloud",
+        "Accessible en ligne, depuis la première page, depuis le premier jour de son développement.",
+        "fa6-solid:cloud"
+      ],
+      [
+        "Pas d'option payante",
+        "Constitue une solution tout en un, sans option, adaptée à tous.",
+        "fa6-solid:tags"
+      ],
+      [
+        "Hautement sécurisé",
+        "Assure la protection et la confidentialité de vos données.",
+        "fa6-solid:shield-halved"
+      ],
+      [
+        "Paramètres personnalisables",
+        "Offre l'intégralité des fonctionnalités nécessaires à la gestion d'entreprise.",
+        "fa6-solid:wand-magic-sparkles"
+      ],
+      [
+        "Une interface conviviale",
+        "Compatible pour tout développement de procédures sur mesure à la demande.",
+        "fa6-solid:eye-dropper"
+      ],
+      [
+        "Service Client 24/7",
+        "Dispose d'une équipe toujours prête pour vous assister rapidement et efficacement.",
+        "fa6-solid:life-ring"
+      ]
+    ]
+  },
+  "aLaUne": {
+    "titre": "À la une",
+    "cartes": [
+      {
+        "titre": "Programme Partenaire #spread",
+        "texte": "Le module fondateur d'un ensemble administratif, propulsé par sa communauté.",
+        "cta": "En savoir plus",
+        "lien": "/blog/programme-partenaire-spread/",
+        "image": "programme-partenaire-spread"
+      },
+      {
+        "titre": "Ready, Set, Go, 1 hour Setup.",
+        "texte": "Efficacité et rapidité : le déploiement en 1 heure d'un programme performant.",
+        "cta": "Commencez votre aventure",
+        "lien": "/blog/ready-set-go-1-hour-setup/",
+        "image": "ready-set-go-1-hour-setup"
+      },
+      {
+        "titre": "Support à la création des textes légaux",
+        "texte": "Une bonne base juridique est simple, mais pas simpliste. Démarrez votre activité du bon pied. Nous vous fournissons les outils et les conseils pour transformer votre première transaction en une relation client durable.",
+        "cta": "",
+        "lien": "",
+        "image": ""
+      }
+    ]
+  },
+  "derniers": {
+    "titre": "Nos derniers contenus",
+    "intro": "Découvrez les nouveautés dans notre entreprise !",
+    "tout": "Voir tout"
+  },
+  "chiffres": [
+    [
+      "169",
+      "Modules"
+    ],
+    [
+      "25",
+      "Secteurs actifs"
+    ],
+    [
+      "18",
+      "Collaborateurs"
+    ],
+    [
+      "1800 +",
+      "Déclarations TVA"
+    ]
+  ],
+  "partenaires": {
+    "titre": "Ils s'intègrent à mySelion"
+  },
+  "menu": {
+    "Plateforme": "Plateforme",
+    "Modules": "Modules",
+    "Offres": "Offres",
+    "Atouts": "Atouts",
+    "Ressources": "Ressources",
+    "Casus": "Casus",
+    "Tutoriels": "Tutoriels",
+    "Communauté": "Communauté",
+    "Programme Partenaire #spread": "Programme Partenaire #spread",
+    "Démonstration": "Démonstration",
+    "Se connecter": "Se connecter",
+    "Contact": "Contact",
+    "mySelion": "mySelion",
+    "Légal": "Légal",
+    "CLUF": "Contrat de Licence Utilisateur Final (CLUF)"
+  },
+  "blog": {
+    "titre": "Blog",
+    "description": "Casus, tutoriels et actualités de la communauté mySelion.",
+    "retour": "← Blog",
+    "ecouter": "Écouter l'article",
+    "vide": "Aucun article pour le moment.",
+    "toutes": "Tous"
+  },
+  "legal": {
+    "mentions-legales": "Mentions légales",
+    "vie-privee": "Vie privée",
+    "cookies": "Cookies",
+    "conditions-generales": "Conditions générales de vente",
+    "cluf": "Contrat de Licence Utilisateur Final (CLUF)",
+    "description": "{titre} de mySelion (GROUPE SELION srl.)."
+  }
+}

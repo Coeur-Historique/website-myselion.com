@@ -1,0 +1,86 @@
+---
+// src/pages/fr/blog/[slug].astro — article du blog (/fr/blog/<customSlug>/).
+// Le titre H1 fait partie du contenu de l'article : la page n'en ajoute pas.
+import { getCollection, render } from 'astro:content';
+import { Image } from 'astro:assets';
+import Page from '../../../layouts/Page.astro';
+import { contenu, type SiteLocale } from '../../../i18n/contenu';
+import { getBlogEntryLocale } from '../../../i18n';
+
+export async function getStaticPaths() {
+  const articles = await getCollection('blog');
+  return articles.map((article) => ({
+    params: { lang: getBlogEntryLocale(article.id), slug: article.data.customSlug ?? article.id },
+    props: { article },
+  }));
+}
+
+const { article } = Astro.props;
+const lang = Astro.params.lang as SiteLocale;
+const L = contenu(lang);
+const { Content } = await render(article);
+const { title, description, image, author, pubDate, audioUrl } = article.data;
+const date = pubDate.toLocaleDateString(`${lang}-BE`, { day: 'numeric', month: 'long', year: 'numeric' });
+---
+
+<Page title={`${title} — mySelion`} description={description} type="article" publishedAt={pubDate.toISOString()} image={image?.src}>
+  <article class="py-5 bg-white">
+    <div class="container py-3 texte-article">
+      <p class="retour"><a href={`/${lang}/blog/`}>{L.blog.retour}</a></p>
+      {image && <Image src={image} alt="" width={1200} class="couverture" />}
+      <p class="meta">{date}{author && ` · ${author}`}</p>
+      {audioUrl && (
+        <audio controls preload="none" src={audioUrl} class="audio">
+          <a href={audioUrl}>{L.blog.ecouter}</a>
+        </audio>
+      )}
+      <Content />
+    </div>
+  </article>
+</Page>
+
+<style>
+  .texte-article {
+    max-width: 52rem;
+  }
+  .retour a {
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .texte-article :global(.couverture) {
+    width: 100%;
+    height: auto;
+    max-height: 24rem;
+    object-fit: cover;
+    border-radius: 1rem;
+    margin: 0.5rem 0 1rem;
+  }
+  .meta {
+    color: #64748b;
+    font-size: 0.9rem;
+  }
+  .audio {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+  .texte-article :global(h1) {
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+  }
+  .texte-article :global(h2) {
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin: 2rem 0 0.75rem;
+  }
+  .texte-article :global(h3) {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin: 1.5rem 0 0.5rem;
+  }
+  .texte-article :global(p),
+  .texte-article :global(li) {
+    line-height: 1.7;
+    text-align: justify;
+    hyphens: auto;
+  }
+</style>

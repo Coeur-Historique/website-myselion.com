@@ -1,0 +1,55 @@
+---
+// src/layouts/Page.astro — fine couche au-dessus de BaseLayout (contenant partage) qui
+// injecte automatiquement siteConfig/translations/themeVars/translatedPaths propres a
+// CE site, pour eviter de repeter ces 4 props sur chaque page. Deja generique --
+// aucune modification necessaire pour un nouveau site.
+//
+// logoSrc : logo mySelion repris de l'ancien site Odoo (/web/image/website/1/logo, 156 px).
+import type { ImageMetadata } from 'astro';
+import BaseLayout from '@coeur-historique/website-shell/BaseLayout.astro';
+import { SITE_VARIABLES, THEME_VARS } from '../site.variables';
+import translations from '../i18n/translations.json';
+import { TRANSLATED_PATHS, getLocaleFromPathname } from '../i18n';
+import defaultLogoSrc from '../assets/logo-myselion.png';
+import { contenu } from '../i18n/contenu';
+
+interface Props {
+  title: string;
+  description: string;
+  image?: string;
+  canonical?: string;
+  type?: string;
+  publishedAt?: string;
+  logoSrc?: ImageMetadata;
+  showVolontariatCta?: boolean;
+}
+
+const lang = getLocaleFromPathname(Astro.url.pathname);
+
+// Libellés des entrées de menu et du fatfooter traduits (le shell ne rend que les valeurs).
+const menu: Record<string, string> = contenu(lang).menu;
+const tr = <T extends { name: string }>(entry: T): T => ({ ...entry, name: menu[entry.name] ?? entry.name });
+const siteConfig = {
+  ...SITE_VARIABLES,
+  cible: SITE_VARIABLES.cible.map(tr),
+  service: SITE_VARIABLES.service.map(tr),
+  objectif: SITE_VARIABLES.objectif.map(tr),
+  headerCta: SITE_VARIABLES.headerCta && tr(SITE_VARIABLES.headerCta),
+  fatFooter: SITE_VARIABLES.fatFooter?.map((group) => ({
+    title: menu[group.title] ?? group.title,
+    links: group.links.map(tr),
+  })),
+};
+---
+
+<BaseLayout
+  siteConfig={siteConfig}
+  translations={translations}
+  lang={lang}
+  themeVars={THEME_VARS}
+  translatedPaths={TRANSLATED_PATHS}
+  logoSrc={defaultLogoSrc}
+  {...Astro.props}
+>
+  <slot />
+</BaseLayout>

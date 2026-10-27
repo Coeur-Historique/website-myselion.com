@@ -1,0 +1,11 @@
+---
+// src/pages/index.astro
+// Stub racine OBLIGATOIRE avec prefixDefaultLocale: true (astro.config.mjs) : Astro exige
+// un fichier index.astro a la racine de src/pages/ pour generer la redirection "/" ->
+// "/<langue par defaut>". Ne pas supprimer ce fichier ni y mettre du contenu : il ne
+// sert qu'a la redirection. Son absence est passee inapercue une fois sur
+// website-coeur-historique.be (racine du domaine en 404), corrigee le 05/08/2026 --
+// voir docs/procedure/verification-hebdomadaire-site.md, Etape 6.
+// Voir : https://docs.astro.build/en/guides/internationalization/
+return Astro.redirect('/fr');
+---

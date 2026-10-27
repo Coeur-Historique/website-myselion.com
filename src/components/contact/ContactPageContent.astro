@@ -1,0 +1,64 @@
+---
+// src/components/contact/ContactPageContent.astro
+// Deja generique -- aucune modification necessaire pour un nouveau site.
+import CTASection from '@coeur-historique/website-shell/CTASection.astro';
+import ContactForm from '@coeur-historique/website-shell/ContactForm.astro';
+import { t, type Locale } from '../../i18n';
+import { SITE_VARIABLES, ENTITY_NAME } from '../../site.variables';
+import translations from '../../i18n/translations.json';
+
+interface Props {
+  lang?: Locale;
+}
+
+const lang = Astro.props.lang ?? 'fr';
+---
+
+<section class="position-relative pt-5 pb-5 bg-light border-bottom overflow-hidden">
+    <div class="container py-5 text-center">
+      <div class="badge-modern mb-4 d-inline-block">
+        <i class="fa fa-envelope text-danger me-2" aria-hidden="true"></i> {t('contact.badge', lang)}
+      </div>
+      <h1 class="display-3 fw-bold mb-4 text-brand-dark lh-sm">
+        {t('contact.title', lang).replace('{name}', ENTITY_NAME)}
+      </h1>
+      <p class="lead text-high-contrast mx-auto" style="max-width: 800px;">
+        {t('contact.intro', lang)}
+      </p>
+    </div>
+  </section>
+
+<section id="contact-form" class="pt-5 pb-2 bg-white">
+  <div class="container py-4">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <div class="card border rounded-4 shadow-sm p-4 p-md-5">
+          <h2 class="h4 fw-bold text-brand-dark mb-2">{t('contact.form.title', lang)}</h2>
+          <p class="text-secondary small mb-4">{t('contact.form.subtitle', lang)}</p>
+
+          <ContactForm siteConfig={SITE_VARIABLES} translations={translations} lang={lang} mode="generic" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="pt-5 pb-5 bg-white">
+    <div class="container py-4">
+      <div class="row mt-5">
+        <div class="col-lg-10 mx-auto text-center">
+          <div class="p-4 border-top border-bottom bg-light rounded-4">
+            <h3 class="h6 fw-bold text-brand-dark mb-2"><i class="fa fa-lock text-success me-2" aria-hidden="true"></i> {t('contact.privacy.title', lang)}</h3>
+            <p class="text-high-contrast small mb-0 max-width-600 mx-auto" style="text-align: justify;">
+              {t('contact.privacy.desc', lang)}
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+<section class="container border-top pt-4 pb-2">
+  <CTASection siteConfig={SITE_VARIABLES} translations={translations} lang={lang} />
+</section>

@@ -1,0 +1,625 @@
+{
+  "contact.form.email.label": {
+    "fr": "Adresse email",
+    "en": "Email address",
+    "nl": "E-mailadres",
+    "de": "E-Mail-Adresse",
+    "es": "Dirección de correo electrónico"
+  },
+  "contact.form.error": {
+    "fr": "Une erreur est survenue. Réessayez ou appelez-nous directement.",
+    "en": "An error occurred. Please try again or call us directly.",
+    "nl": "Er is een fout opgetreden. Probeer het opnieuw of bel ons rechtstreeks.",
+    "de": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut oder rufen Sie uns direkt an.",
+    "es": "Se ha producido un error. Vuelva a intentarlo o llámenos directamente."
+  },
+  "contact.form.message.label": {
+    "fr": "Votre message",
+    "en": "Your message",
+    "nl": "Uw bericht",
+    "de": "Ihre Nachricht",
+    "es": "Su mensaje"
+  },
+  "contact.form.message.placeholder": {
+    "fr": "Décrivez votre demande en quelques lignes...",
+    "en": "Describe your request in a few lines...",
+    "nl": "Beschrijf uw vraag in enkele regels...",
+    "de": "Beschreiben Sie Ihr Anliegen in wenigen Zeilen...",
+    "es": "Describa su solicitud en unas pocas líneas..."
+  },
+  "contact.form.name.label": {
+    "fr": "Nom et prénom",
+    "en": "Full name",
+    "nl": "Naam en voornaam",
+    "de": "Vor- und Nachname",
+    "es": "Nombre y apellidos"
+  },
+  "contact.form.phone.label": {
+    "fr": "Téléphone (optionnel)",
+    "en": "Phone (optional)",
+    "nl": "Telefoon (optioneel)",
+    "de": "Telefon (optional)",
+    "es": "Teléfono (opcional)"
+  },
+  "contact.form.subject.contextual.label": {
+    "fr": "Objet (pré-rempli)",
+    "en": "Subject (prefilled)",
+    "nl": "Onderwerp (vooraf ingevuld)",
+    "de": "Betreff (vorausgefüllt)",
+    "es": "Asunto (rellenado previamente)"
+  },
+  "contact.form.subject.generic.fallback": {
+    "fr": "Nous contacter",
+    "en": "Contact us",
+    "nl": "Contacteer ons",
+    "de": "Kontakt aufnehmen",
+    "es": "Contáctenos"
+  },
+  "contact.form.subject.label": {
+    "fr": "Objet de votre message",
+    "en": "Subject of your message",
+    "nl": "Onderwerp van uw bericht",
+    "de": "Betreff Ihrer Nachricht",
+    "es": "Asunto de su mensaje"
+  },
+  "contact.form.subject.placeholder": {
+    "fr": "Choisissez un objet",
+    "en": "Choose a subject",
+    "nl": "Kies een onderwerp",
+    "de": "Betreff auswählen",
+    "es": "Elija un asunto"
+  },
+  "contact.form.submit.button": {
+    "fr": "Envoyer le message",
+    "en": "Send message",
+    "nl": "Bericht verzenden",
+    "de": "Nachricht senden",
+    "es": "Enviar el mensaje"
+  },
+  "contact.form.submit.sending": {
+    "fr": "Envoi en cours...",
+    "en": "Sending...",
+    "nl": "Bezig met verzenden...",
+    "de": "Wird gesendet...",
+    "es": "Enviando..."
+  },
+  "contact.form.success": {
+    "fr": "Message envoyé ! Notre équipe vous répond très prochainement.",
+    "en": "Message sent! Our team will get back to you very soon.",
+    "nl": "Bericht verzonden! Ons team antwoordt u zeer binnenkort.",
+    "de": "Nachricht gesendet! Unser Team antwortet Ihnen in Kürze.",
+    "es": "¡Mensaje enviado! Nuestro equipo le responderá muy pronto."
+  },
+  "cta.card.appointment.button": {
+    "fr": "Ouvrir l'agenda",
+    "en": "Open the calendar",
+    "nl": "Agenda openen",
+    "de": "Kalender öffnen",
+    "es": "Abrir la agenda"
+  },
+  "cta.card.appointment.desc": {
+    "fr": "Planifiez une session d'audit directement en ligne.",
+    "en": "Schedule an audit session directly online.",
+    "nl": "Plan rechtstreeks online een auditsessie.",
+    "de": "Planen Sie einen Audittermin direkt online.",
+    "es": "Programe una sesión de auditoría directamente en línea."
+  },
+  "cta.card.appointment.title": {
+    "fr": "Prendre Rendez-vous",
+    "en": "Book an Appointment",
+    "nl": "Afspraak maken",
+    "de": "Termin vereinbaren",
+    "es": "Concertar una cita"
+  },
+  "cta.card.call.desc": {
+    "fr": "Échange immédiat avec un conseiller de garde.",
+    "en": "Immediate conversation with an on-call advisor.",
+    "nl": "Onmiddellijk gesprek met een dienstdoende adviseur.",
+    "de": "Sofortiges Gespräch mit einem diensthabenden Berater.",
+    "es": "Conversación inmediata con un asesor de guardia."
+  },
+  "cta.card.call.title": {
+    "fr": "Appel Direct",
+    "en": "Direct Call",
+    "nl": "Rechtstreeks bellen",
+    "de": "Direkter Anruf",
+    "es": "Llamada directa"
+  },
+  "cta.card.callback.button": {
+    "fr": "Rappel immédiat",
+    "en": "Instant callback",
+    "nl": "Onmiddellijk terugbellen",
+    "de": "Sofortiger Rückruf",
+    "es": "Devolución de llamada inmediata"
+  },
+  "cta.card.callback.desc": {
+    "fr": "Vous êtes rappelé instantanément par nos équipes.",
+    "en": "Our teams will call you back instantly.",
+    "nl": "U wordt meteen teruggebeld door onze teams.",
+    "de": "Unser Team ruft Sie umgehend zurück.",
+    "es": "Nuestros equipos le devuelven la llamada al instante."
+  },
+  "cta.card.callback.title": {
+    "fr": "Demande de Rappel",
+    "en": "Callback Request",
+    "nl": "Terugbelverzoek",
+    "de": "Rückrufanfrage",
+    "es": "Solicitud de devolución de llamada"
+  },
+  "cta.card.contactform.button": {
+    "fr": "Nous écrire",
+    "en": "Write to us",
+    "nl": "Schrijf ons",
+    "de": "Schreiben Sie uns",
+    "es": "Escríbanos"
+  },
+  "cta.card.contactform.desc": {
+    "fr": "Une question, une demande ? Écrivez-nous directement.",
+    "en": "A question, a request? Write to us directly.",
+    "nl": "Een vraag, een verzoek? Schrijf ons rechtstreeks.",
+    "de": "Eine Frage, ein Anliegen? Schreiben Sie uns direkt.",
+    "es": "¿Una pregunta, una solicitud? Escríbanos directamente."
+  },
+  "cta.card.contactform.title": {
+    "fr": "Formulaire de Contact",
+    "en": "Contact Form",
+    "nl": "Contactformulier",
+    "de": "Kontaktformular",
+    "es": "Formulario de contacto"
+  },
+  "cta.contactform.contextual.title": {
+    "fr": "Une question à ce sujet ?",
+    "en": "A question about this?",
+    "nl": "Een vraag hierover?",
+    "de": "Eine Frage zu diesem Thema?",
+    "es": "¿Alguna pregunta sobre este tema?"
+  },
+  "cta.default.subtitle": {
+    "fr": "Choisissez le canal de communication qui vous convient le mieux pour amorcer un dialogue strictement confidentiel avec nos administrateurs référents.",
+    "en": "Choose whichever channel suits you best to start a strictly confidential conversation with our lead administrators.",
+    "nl": "Kies het communicatiekanaal dat u het best past om een strikt vertrouwelijke dialoog aan te gaan met onze vaste bestuurders.",
+    "de": "Wählen Sie den Kommunikationskanal, der Ihnen am besten zusagt, um einen streng vertraulichen Dialog mit unseren zuständigen Verwaltern aufzunehmen.",
+    "es": "Elija el canal de comunicación que más le convenga para iniciar un diálogo estrictamente confidencial con nuestros administradores de referencia."
+  },
+  "cta.default.title": {
+    "fr": "Besoin d'un accompagnement immédiat ?",
+    "en": "Need immediate support?",
+    "nl": "Nood aan onmiddellijke begeleiding?",
+    "de": "Benötigen Sie sofortige Unterstützung?",
+    "es": "¿Necesita un acompañamiento inmediato?"
+  },
+  "cta.donation.badge": {
+    "fr": "Faites la différence",
+    "en": "Make a difference",
+    "nl": "Maak het verschil",
+    "de": "Machen Sie den Unterschied",
+    "es": "Marque la diferencia"
+  },
+  "cta.donation.button": {
+    "fr": "Faire un don en ligne",
+    "en": "Donate online",
+    "nl": "Online een gift doen",
+    "de": "Online spenden",
+    "es": "Hacer un donativo en línea"
+  },
+  "cta.donation.desc": {
+    "fr": "Chaque don contribue directement au financement de nos actions.",
+    "en": "Every donation directly funds our work.",
+    "nl": "Elke gift draagt rechtstreeks bij tot de financiering van onze acties.",
+    "de": "Jede Spende trägt unmittelbar zur Finanzierung unserer Aktivitäten bei.",
+    "es": "Cada donativo contribuye directamente a financiar nuestras acciones."
+  },
+  "cta.donation.title": {
+    "fr": "Soutenez nos actions",
+    "en": "Support our actions",
+    "nl": "Steun onze acties",
+    "de": "Unterstützen Sie unsere Aktivitäten",
+    "es": "Apoye nuestras acciones"
+  },
+  "footer.aria.asbl_links": {
+    "fr": "Liens légaux",
+    "en": "Legal links",
+    "nl": "Juridische links",
+    "de": "Rechtliche Links",
+    "es": "Enlaces legales"
+  },
+  "footer.aria.ecosysteme_links": {
+    "fr": "Liens de l'écosystème",
+    "en": "Ecosystem links",
+    "nl": "Links van het ecosysteem",
+    "de": "Links zum Ökosystem",
+    "es": "Enlaces del ecosistema"
+  },
+  "footer.aria.engagements_links": {
+    "fr": "Liens d'engagement",
+    "en": "Get involved links",
+    "nl": "Links over onze engagementen",
+    "de": "Links zu unseren Verpflichtungen",
+    "es": "Enlaces de compromiso"
+  },
+  "footer.aria.soutien_links": {
+    "fr": "Liens de soutien",
+    "en": "Support links",
+    "nl": "Links om ons te steunen",
+    "de": "Links zur Unterstützung",
+    "es": "Enlaces de apoyo"
+  },
+  "footer.aria.synergies_links": {
+    "fr": "Liens des synergies",
+    "en": "Synergies links",
+    "nl": "Links van de synergieën",
+    "de": "Links zu den Synergien",
+    "es": "Enlaces de sinergias"
+  },
+  "footer.col.asbl": {
+    "fr": "Informations légales",
+    "en": "Legal Information",
+    "nl": "Juridische informatie",
+    "de": "Rechtliche Informationen",
+    "es": "Información legal"
+  },
+  "footer.col.ecosysteme": {
+    "fr": "Écosystème",
+    "en": "Ecosystem",
+    "nl": "Ecosysteem",
+    "de": "Ökosystem",
+    "es": "Ecosistema"
+  },
+  "footer.col.engagements": {
+    "fr": "Engagements",
+    "en": "Get Involved",
+    "nl": "Engagementen",
+    "de": "Verpflichtungen",
+    "es": "Compromisos"
+  },
+  "footer.col.soutien": {
+    "fr": "Soutien",
+    "en": "Support",
+    "nl": "Steun",
+    "de": "Unterstützung",
+    "es": "Apoyo"
+  },
+  "footer.col.synergies": {
+    "fr": "Synergies",
+    "en": "Synergies",
+    "nl": "Synergieën",
+    "de": "Synergien",
+    "es": "Sinergias"
+  },
+  "footer.link.agent": {
+    "fr": "Agent",
+    "en": "Agent",
+    "nl": "Agent",
+    "de": "Vertreter",
+    "es": "Agente"
+  },
+  "footer.link.agrement": {
+    "fr": "Agrément",
+    "en": "Accreditation",
+    "nl": "Erkenning",
+    "de": "Zulassung",
+    "es": "Autorización"
+  },
+  "footer.link.assurance": {
+    "fr": "Assurance",
+    "en": "Insurance",
+    "nl": "Verzekering",
+    "de": "Versicherung",
+    "es": "Seguro"
+  },
+  "footer.link.avis": {
+    "fr": "Avis",
+    "en": "Reviews",
+    "nl": "Beoordelingen",
+    "de": "Bewertungen",
+    "es": "Opiniones"
+  },
+  "footer.link.conditions_generales": {
+    "fr": "Conditions générales",
+    "en": "Terms & Conditions",
+    "nl": "Algemene voorwaarden",
+    "de": "Allgemeine Geschäftsbedingungen",
+    "es": "Condiciones generales"
+  },
+  "footer.link.cookies": {
+    "fr": "Cookies",
+    "en": "Cookies",
+    "nl": "Cookies",
+    "de": "Cookies",
+    "es": "Cookies"
+  },
+  "footer.link.core_web_vitals": {
+    "fr": "Core Web Vitals",
+    "en": "Core Web Vitals",
+    "nl": "Core Web Vitals",
+    "de": "Core Web Vitals",
+    "es": "Core Web Vitals"
+  },
+  "footer.link.don": {
+    "fr": "Don",
+    "en": "Donate",
+    "nl": "Gift",
+    "de": "Spende",
+    "es": "Donativo"
+  },
+  "footer.link.equipe": {
+    "fr": "Équipe",
+    "en": "Team",
+    "nl": "Team",
+    "de": "Team",
+    "es": "Equipo"
+  },
+  "footer.link.legs": {
+    "fr": "Legs",
+    "en": "Legacy Giving",
+    "nl": "Legaat",
+    "de": "Vermächtnis",
+    "es": "Legados"
+  },
+  "footer.link.marketing": {
+    "fr": "Marketing",
+    "en": "Marketing",
+    "nl": "Marketing",
+    "de": "Marketing",
+    "es": "Marketing"
+  },
+  "footer.link.mecenat": {
+    "fr": "Mécénat",
+    "en": "Corporate Giving",
+    "nl": "Mecenaat",
+    "de": "Mäzenatentum",
+    "es": "Mecenazgo"
+  },
+  "footer.link.mentions_legales": {
+    "fr": "Mentions légales",
+    "en": "Legal Notice",
+    "nl": "Wettelijke vermeldingen",
+    "de": "Impressum",
+    "es": "Aviso legal"
+  },
+  "footer.link.partenaire": {
+    "fr": "Partenaire",
+    "en": "Partner",
+    "nl": "Partner",
+    "de": "Partner",
+    "es": "Socio"
+  },
+  "footer.link.plan_du_site": {
+    "fr": "Plan du site",
+    "en": "Sitemap",
+    "nl": "Sitemap",
+    "de": "Sitemap",
+    "es": "Mapa del sitio"
+  },
+  "footer.link.sous_traitant": {
+    "fr": "Sous-traitant",
+    "en": "Subcontractor",
+    "nl": "Onderaannemer",
+    "de": "Subunternehmer",
+    "es": "Subcontratista"
+  },
+  "footer.link.sponsoring": {
+    "fr": "Sponsoring",
+    "en": "Sponsorship",
+    "nl": "Sponsoring",
+    "de": "Sponsoring",
+    "es": "Patrocinio"
+  },
+  "footer.link.vie_privee": {
+    "fr": "Vie privée",
+    "en": "Privacy",
+    "nl": "Privacy",
+    "de": "Datenschutz",
+    "es": "Privacidad"
+  },
+  "footer.link.vision": {
+    "fr": "Vision",
+    "en": "Vision",
+    "nl": "Visie",
+    "de": "Vision",
+    "es": "Visión"
+  },
+  "footer.top.label": {
+    "fr": "Top, Remonter en haut de la page",
+    "en": "Top, Back to top of page",
+    "nl": "Top, terug naar boven",
+    "de": "Nach oben, zum Seitenanfang zurückkehren",
+    "es": "Arriba, volver al inicio de la página"
+  },
+  "footer.top.text": {
+    "fr": "Top",
+    "en": "Top",
+    "nl": "Top",
+    "de": "Nach oben",
+    "es": "Arriba"
+  },
+  "header.aria.toggle_menu": {
+    "fr": "Ouvrir le menu",
+    "en": "Open menu",
+    "nl": "Menu openen",
+    "de": "Menü öffnen",
+    "es": "Abrir el menú"
+  },
+  "header.cta.contact_immediat": {
+    "fr": "Contact Immédiat",
+    "en": "Immediate Contact",
+    "nl": "Onmiddellijk contact",
+    "de": "Sofortkontakt",
+    "es": "Contacto inmediato"
+  },
+  "header.nav.contact": {
+    "fr": "Contact",
+    "en": "Contact",
+    "nl": "Contact",
+    "de": "Kontakt",
+    "es": "Contacto"
+  },
+  "header.nav.home": {
+    "fr": "Accueil",
+    "en": "Home",
+    "nl": "Home",
+    "de": "Startseite",
+    "es": "Inicio"
+  },
+  "header.nav.inscription": {
+    "fr": "Inscription",
+    "en": "Sign Up",
+    "nl": "Inschrijving",
+    "de": "Anmeldung",
+    "es": "Inscripción"
+  },
+  "header.nav.cible": {
+    "fr": "Nos clients",
+    "en": "Clients",
+    "nl": "Onze klanten",
+    "de": "Unsere Kunden",
+    "es": "Nuestros clientes"
+  },
+  "header.nav.service": {
+    "fr": "Nos services",
+    "en": "Services",
+    "nl": "Onze diensten",
+    "de": "Unsere Dienstleistungen",
+    "es": "Nuestros servicios"
+  },
+  "header.nav.objectif": {
+    "fr": "Nos valeurs",
+    "en": "Our values",
+    "nl": "Onze waarden",
+    "de": "Unsere Werte",
+    "es": "Nuestros valores"
+  },
+  "header.nav.blog": {
+    "fr": "Actualités",
+    "en": "News",
+    "nl": "Nieuws",
+    "de": "Aktuelles",
+    "es": "Actualidad"
+  },
+  "header.nav.volontariat": {
+    "fr": "Recrutement",
+    "en": "Careers",
+    "nl": "Rekrutering",
+    "de": "Karriere",
+    "es": "Empleo"
+  },
+  "index.meta.title": {
+    "fr": "mySelion — Tout votre business sur une plateforme",
+    "en": "Selion — IT architecture and ICT security",
+    "nl": "GROUPE SELION — Bedrijfsbeheervennootschap",
+    "de": "GROUPE SELION — Unternehmensmanagement-Gesellschaft",
+    "es": "GROUPE SELION — Empresa de gestión empresarial"
+  },
+  "index.meta.description": {
+    "fr": "Plateforme de gestion complète, intégrée et évolutive : facturation, achats, comptabilité, TVA et administration, déployée en 1 heure.",
+    "en": "IT architecture and ICT security.",
+    "nl": "Eén aanspreekpunt voor alle ondersteunende functies van uw onderneming: 6 polen, 25 transversale diensten, 13 vennootschappen en merken. Luik, sinds 2014.",
+    "de": "Ein einziger Ansprechpartner für alle Supportfunktionen Ihres Unternehmens: 6 Geschäftsbereiche, 25 bereichsübergreifende Dienstleistungen, 13 Gesellschaften und Marken. Lüttich, seit 2014.",
+    "es": "Interlocutor único para todas las funciones de soporte de su empresa: 6 áreas, 25 servicios transversales, 13 sociedades y marcas. Lieja, desde 2014."
+  },
+  "index.hero.title": {
+    "fr": "Bienvenue sur le site",
+    "en": "Welcome to the site",
+    "nl": "Welkom op de website",
+    "de": "Willkommen auf der Website",
+    "es": "Bienvenido al sitio"
+  },
+  "index.hero.lead": {
+    "fr": "Ce texte est un exemple a remplacer par le vrai contenu de la homepage.",
+    "en": "This text is a placeholder to replace with the real homepage content.",
+    "nl": "Deze tekst is een voorbeeld dat vervangen moet worden door de echte inhoud van de homepage.",
+    "de": "Dieser Text ist ein Beispiel, das durch den tatsächlichen Inhalt der Startseite zu ersetzen ist.",
+    "es": "Este texto es un ejemplo que debe sustituirse por el contenido real de la página de inicio."
+  },
+  "contact.meta.title": {
+    "fr": "Contact – {name}",
+    "en": "Contact – {name}",
+    "nl": "Contact – {name}",
+    "de": "Kontakt – {name}",
+    "es": "Contacto – {name}"
+  },
+  "contact.meta.description": {
+    "fr": "Contactez-nous.",
+    "en": "Contact us.",
+    "nl": "Neem contact met ons op.",
+    "de": "Kontaktieren Sie uns.",
+    "es": "Contáctenos."
+  },
+  "contact.badge": {
+    "fr": "Une équipe à votre écoute",
+    "en": "A team ready to listen",
+    "nl": "Een team dat naar u luistert",
+    "de": "Ein Team, das für Sie da ist",
+    "es": "Un equipo a su disposición"
+  },
+  "contact.title": {
+    "fr": "Contactez {name}",
+    "en": "Contact {name}",
+    "nl": "Contacteer {name}",
+    "de": "Kontaktieren Sie {name}",
+    "es": "Contacte con {name}"
+  },
+  "contact.intro": {
+    "fr": "Une question ? Contactez-nous via le formulaire ci-dessous.",
+    "en": "A question? Get in touch using the form below.",
+    "nl": "Een vraag? Neem contact met ons op via het onderstaande formulier.",
+    "de": "Eine Frage? Kontaktieren Sie uns über das untenstehende Formular.",
+    "es": "¿Alguna pregunta? Contáctenos mediante el formulario que figura a continuación."
+  },
+  "contact.form.title": {
+    "fr": "Envoyez-nous un message",
+    "en": "Send us a message",
+    "nl": "Stuur ons een bericht",
+    "de": "Senden Sie uns eine Nachricht",
+    "es": "Envíenos un mensaje"
+  },
+  "contact.form.subtitle": {
+    "fr": "Nous vous répondons rapidement.",
+    "en": "We will get back to you quickly.",
+    "nl": "Wij antwoorden u snel.",
+    "de": "Wir antworten Ihnen schnell.",
+    "es": "Le responderemos rápidamente."
+  },
+  "contact.privacy.title": {
+    "fr": "Vos données sont protégées",
+    "en": "Your data is protected",
+    "nl": "Uw gegevens zijn beschermd",
+    "de": "Ihre Daten sind geschützt",
+    "es": "Sus datos están protegidos"
+  },
+  "contact.privacy.desc": {
+    "fr": "Vos informations ne sont utilisées que pour répondre à votre demande.",
+    "en": "Your information is only used to respond to your request.",
+    "nl": "Uw gegevens worden uitsluitend gebruikt om uw vraag te beantwoorden.",
+    "de": "Ihre Angaben werden ausschließlich zur Beantwortung Ihrer Anfrage verwendet.",
+    "es": "Su información solo se utiliza para responder a su solicitud."
+  },
+  "header.cta.assistance": {
+    "fr": "Assistance",
+    "en": "Assistance",
+    "nl": "Assistentie",
+    "de": "Hilfe",
+    "es": "Asistencia"
+  },
+  "stickyBar.call": {
+    "fr": "Appeler",
+    "en": "Call",
+    "nl": "Bellen",
+    "de": "Anrufen",
+    "es": "Llamar"
+  },
+  "stickyBar.callback": {
+    "fr": "Rappel",
+    "en": "Callback",
+    "nl": "Terugbellen",
+    "de": "Rückruf",
+    "es": "Devolución de llamada"
+  },
+  "stickyBar.appointment": {
+    "fr": "Rendez-vous",
+    "en": "Appointment",
+    "nl": "Afspraak",
+    "de": "Termin",
+    "es": "Cita"
+  }
+}

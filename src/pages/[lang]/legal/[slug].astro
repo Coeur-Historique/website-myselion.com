@@ -1,0 +1,54 @@
+---
+// src/pages/[lang]/legal/[slug].astro — textes légaux repris de l'ancien www.myselion.com (Odoo)
+// le 27/10/2026, à l'identique sauf l'hébergeur (Odoo -> Vercel, mentions légales).
+// URL imposées par les liens légaux du footer du shell : /<langue>/legal/<slug>/.
+// Traductions : src/content/legal/<langue>/<slug>.html ; le français fait foi et sert
+// de repli pour une langue sans traduction.
+import Page from '../../../layouts/Page.astro';
+import { LEGAL_PAGES } from '../../../content/legal/pages';
+import { SITE_LOCALES, contenu, fmt, type SiteLocale } from '../../../i18n/contenu';
+
+const textes = import.meta.glob('../../../content/legal/**/*.html', { query: '?raw', import: 'default', eager: true }) as Record<string, string>;
+
+export function getStaticPaths() {
+  return SITE_LOCALES.flatMap((lang) => LEGAL_PAGES.map((page) => ({ params: { lang, slug: page.slug }, props: { page } })));
+}
+
+const { page } = Astro.props;
+const lang = Astro.params.lang as SiteLocale;
+const L = contenu(lang);
+const titre = L.legal[page.slug];
+const html =
+  textes[`../../../content/legal/${lang}/${page.slug}.html`] ?? textes[`../../../content/legal/${page.slug}.html`];
+---
+
+<Page title={`${titre} — mySelion`} description={fmt(L.legal.description, { titre })}>
+  <section class="py-5 bg-white">
+    <div class="container py-3 texte-legal">
+      <h1 class="mb-4">{titre}</h1>
+      <div set:html={html} />
+    </div>
+  </section>
+</Page>
+
+<style>
+  .texte-legal {
+    max-width: 52rem;
+  }
+  .texte-legal :global(h2) {
+    font-size: 1.25rem;
+    font-weight: 800;
+    margin: 2rem 0 0.75rem;
+  }
+  .texte-legal :global(h3) {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin: 1.5rem 0 0.5rem;
+  }
+  .texte-legal :global(p),
+  .texte-legal :global(li) {
+    line-height: 1.65;
+    text-align: justify;
+    hyphens: auto;
+  }
+</style>

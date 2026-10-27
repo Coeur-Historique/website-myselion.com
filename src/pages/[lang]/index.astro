@@ -1,0 +1,13 @@
+---
+import Page from '../../layouts/Page.astro';
+import HomePageContent from '../../components/home/HomePageContent.astro';
+import { contenu, localeStaticPaths, type SiteLocale } from '../../i18n/contenu';
+
+export const getStaticPaths = localeStaticPaths;
+const lang = Astro.params.lang as SiteLocale;
+const L = contenu(lang);
+---
+
+<Page title={L.meta.titre} description={L.meta.description}>
+  <HomePageContent lang={lang} />
+</Page>
