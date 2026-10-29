@@ -15,10 +15,10 @@ export const SITE_VARIABLES: SiteConfig = {
   legalDenomination: "GROUPE SELION srl.",
   themeClass: "theme-myselion",
   favicon: "/favicon-myselion.png",
-  domain: "https://myselion.com",
+  domain: "https://www.myselion.com",
   // Ancien site en français uniquement.
   locales: ["fr"],
-  ogImageUrl: "https://myselion.com/favicon-myselion.png",
+  ogImageUrl: "https://www.myselion.com/favicon-myselion.png",
 
   analytics: {
     gaMeasurementId: "",
