@@ -12,7 +12,7 @@ import sitemap from '@astrojs/sitemap';
 // A FAIRE lors de la mise en route d'un nouveau site : remplacer SITE_DOMAIN et
 // SITE_LOCALES ci-dessous par les vraies valeurs du site (doivent rester
 // cohérentes avec src/site.variables.ts : domain/locales).
-const SITE_DOMAIN = 'https://myselion.com';
+const SITE_DOMAIN = 'https://www.myselion.com';
 // Français uniquement, comme l'ancien site (meme liste que site.variables.ts et src/i18n/contenu.ts).
 const SITE_LOCALES = ['fr'];
 const DEFAULT_LOCALE = SITE_LOCALES[0];
