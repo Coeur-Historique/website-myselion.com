@@ -52,6 +52,8 @@ export const SITE_VARIABLES: SiteConfig = {
     email: "info@myselion.com",
     emailUrl: "mailto:info@myselion.com",
     address: "Rue Velbruck 6, 4000 Liège, Belgique",
+    // Plan Google Maps de la page contact standard (shell-contact).
+    mapQuery: "mySelion, Rue Velbruck 6, 4000 Liège",
     tvaNumber: "BE0556676367",
     kboUrl: "https://kbopub.economie.fgov.be/kbopub/toonondernemingps.html?ondernemingsnummer=0556676367",
     // Lien « Rappel immédiat » de l'offre Business sur l'ancien site.
