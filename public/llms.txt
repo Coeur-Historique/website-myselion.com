@@ -1,0 +1,42 @@
+# mySelion
+
+> mySelion est une plateforme de gestion d'entreprise complète, intégrée et évolutive, déployée en 1 heure : ventes et facturation, achats, stock, comptabilité et fiscalité (TVA, ISOC), paie, opérations et administration, sur une seule plateforme. Devise : « Tout votre business sur une plateforme ».
+
+mySelion est une marque de GROUPE SELION srl. (« MYSELION, a GROUPE SELION company »), basée à Liège (Belgique), développée par des gestionnaires pour des gestionnaires. Tous les modules sont inclus, sans option payante : devis, ventes récurrentes, factures, notes de crédit, caisse, achats, avoirs, notes de frais, inventaire, justificatifs, flux bancaires, balances, TVA, payroll, pointage, QR dynamique, courriers, processus personnalisés, gestion des contacts, clients, fournisseurs, agents, flotte, points d'intérêt et IBAN. La plateforme est prête pour Peppol (facturation électronique). Trois offres (Starter, Professionnel, Business) adaptées des indépendants aux entreprises, avec déploiement assisté par les équipes de mySelion et un programme partenaire (#spread).
+
+## Pages principales
+
+- [Accueil](https://www.myselion.com/fr/) : modules de la plateforme, avantages et offres
+- [Contact](https://www.myselion.com/fr/contact/) : formulaire, téléphone, rappel et rendez-vous
+
+## Blog
+
+- [Blog](https://www.myselion.com/fr/blog/) : casus, tutoriels et actualités de la communauté mySelion
+- [Ready, Set, Go, 1 hour Setup.](https://www.myselion.com/fr/blog/ready-set-go-1-hour-setup/) : le déploiement en 1 heure
+- [#UDB - United DataBase](https://www.myselion.com/fr/blog/udb-united-database/) : une base de données unique et connectée
+- [Programme Partenaire #spread](https://www.myselion.com/fr/blog/programme-partenaire-spread/)
+- [LCS - Licences](https://www.myselion.com/fr/blog/lcs-licences-gestion-et-organisation-des-licences/) : gestion et organisation des licences
+- [BRD - Marques](https://www.myselion.com/fr/blog/brd-marques-identite-economique/) : identité administrative et commerciale
+- [CEF - Clients et Fournisseurs](https://www.myselion.com/fr/blog/cef-clients-et-fournisseurs-l-unite-de-liaison-par-defaut/)
+- [CTC - Contacts](https://www.myselion.com/fr/blog/ctc-contacts-gestion-des-relations-marketing-et-commerciales/) : relations marketing et commerciales
+- [USR - Utilisateurs](https://www.myselion.com/fr/blog/usr-utilisateurs-acces-et-droits-des-utilisateurs/) : accès et droits des utilisateurs
+- [IBN - IBAN](https://www.myselion.com/fr/blog/ibn-iban-gestion-des-liaisons-bancaires/) : gestion des liaisons bancaires
+- [AG0 - Agents](https://www.myselion.com/fr/blog/ag0-agents/)
+- [FLE - Fleet](https://www.myselion.com/fr/blog/fle-fleet/)
+- [PDI - Point d'intérêt](https://www.myselion.com/fr/blog/pdi-point-d-interet/)
+
+## Contact
+
+- Téléphone : +32 4 295 20 63
+- E-mail : info@myselion.com
+- Adresse : Rue Velbruck 6, 4000 Liège, Belgique
+- Éditeur : GROUPE SELION srl., TVA BE 0556.676.367
+- Groupe : [GROUPE SELION](https://www.selion.be)
+
+## Optional
+
+- [Mentions légales](https://www.myselion.com/fr/legal/mentions-legales/)
+- [Conditions générales de vente](https://www.myselion.com/fr/legal/conditions-generales/)
+- [Contrat de Licence Utilisateur Final (CLUF)](https://www.myselion.com/fr/legal/cluf/)
+- [Vie privée](https://www.myselion.com/fr/legal/vie-privee/)
+- [Cookies](https://www.myselion.com/fr/legal/cookies/)

@@ -21,8 +21,8 @@ site. Seul changement de fond : l'hébergeur des mentions légales (Odoo → Ver
 - Logo haute définition : l'ancien site ne fournit qu'un 156 px (`src/assets/logo-myselion.png`).
 - Réseaux sociaux : aucun n'était configuré sur l'ancien site.
 - Textes légaux : ils citent encore `www.selion.be` (repris tels quels de l'ancien site).
-- Lien « Se connecter » : pointe vers `https://www.myselion.com/web/login` (la plateforme Odoo) ;
-  à adapter si le domaine principal passe sur ce site.
+- Lien « Se connecter » : pointe vers `https://app.myselion.net/login` (la plateforme) ; l'ancien
+  `https://www.myselion.com/web/login` (Odoo) répond 404 depuis la bascule du domaine (30/10/2026).
 - Vercel : créer le projet (variable `SHELL_READ_TOKEN`, voir `vercel.json`), puis la procédure
   `myselion4nonprofit/docs/procedure/verification-hebdomadaire-site.md` avant la bascule DNS.
 
