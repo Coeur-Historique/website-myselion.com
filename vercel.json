@@ -3,7 +3,12 @@
   "redirects": [
     {
       "source": "/",
-      "destination": "/fr",
+      "destination": "/fr/",
+      "permanent": true
+    },
+    {
+      "source": "/sitemap.xml",
+      "destination": "/sitemap-index.xml",
       "permanent": true
     },
     {

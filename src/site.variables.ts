@@ -82,8 +82,8 @@ export const SITE_VARIABLES: SiteConfig = {
     { name: "Programme Partenaire #spread", slug: "/blog/programme-partenaire-spread/" },
   ],
 
-  // « Se connecter » de l'ancien header : accès à la plateforme.
-  headerCta: { name: "Se connecter", slug: "https://www.myselion.com/web/login" },
+  // « Se connecter » : accès à la plateforme (app.myselion.net ; l'ancien /web/login Odoo répond 404 depuis la bascule, 30/10/2026).
+  headerCta: { name: "Se connecter", slug: "https://app.myselion.net/login" },
 
   fatFooter: [
     {
