@@ -92,6 +92,36 @@ export const SITE_VARIABLES: SiteConfig = {
     actualites: "/blog",
     partenaire: "/blog/programme-partenaire-spread",
   },
+  // Pré-footer du shell (07/11/2026) : colonnes propres au site, juste au-dessus du fatfooter
+  // commun. Liens de l'ancien fatfooter libre qui n'ont pas de place dans la grille figée.
+  // Le CLUF a sa propre colonne « Légal » pour rester bien visible.
+  preFooter: [
+    {
+      title: "mySelion",
+      links: [
+        { name: "Modules", slug: "/#modules" },
+        { name: "Offres", slug: "/#offres" },
+        { name: "Atouts", slug: "/#atouts" },
+        { name: "Démonstration", url: "https://calendar.app.google/HaY66yydHRhzNKVN8" },
+      ],
+    },
+    {
+      title: "Ressources",
+      links: [
+        { name: "Casus", slug: "/blog/?categorie=casus" },
+        { name: "Tutoriels", slug: "/blog/?categorie=tutoriels" },
+        { name: "Communauté", slug: "/blog/?categorie=communaute" },
+      ],
+    },
+    {
+      title: "Légal",
+      links: [{ name: "CLUF", slug: "/legal/cluf/" }],
+    },
+    {
+      title: "GROUPE SELION",
+      links: [{ name: "GROUPE SELION", url: "https://selion.be" }],
+    },
+  ],
 };
 
 export const ENTITY_NAME = SITE_VARIABLES.legalDenomination ?? `${SITE_VARIABLES.title} ${SITE_VARIABLES.legalForm}`;
