@@ -3,6 +3,7 @@ import purgecss from 'astro-purgecss';
 import icon from 'astro-icon';
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
+import shellSitemapNoindex from '@coeur-historique/website-shell/tooling/sitemap-noindex';
 
 // Repo-modele (contenu) pour un nouveau site du groupe -- voir README.md pour la
 // procedure complete de mise en route. Base sur website-coeur-historique.be
@@ -39,6 +40,8 @@ export default defineConfig({
       },
     }),
     purgecss(),
+    // Après sitemap() : retire du sitemap les pages noindex (pages d'attente du fatfooter).
+    shellSitemapNoindex(),
   ],
   build: {
     inlineStylesheets: 'always',

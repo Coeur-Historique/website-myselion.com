@@ -1,0 +1,22 @@
+---
+// Pages d'attente standard du fatfooter commun (shell) : une page par langue et par entrée
+// sans cible dans SITE_VARIABLES.fatFooter. Gabarit, libellés et boutons fournis par le shell ;
+// noindex et retirées du sitemap (intégration sitemap-noindex, astro.config.mjs).
+import Page from '../../../layouts/Page.astro';
+import {
+  FatFooterWaitingPage,
+  fatFooterWaitingMeta,
+  fatFooterWaitingPaths,
+} from '@coeur-historique/website-shell/fatfooter';
+import { SITE_VARIABLES } from '../../../site.variables';
+
+export function getStaticPaths() {
+  return fatFooterWaitingPaths(SITE_VARIABLES);
+}
+
+const { lang, entry } = Astro.props;
+---
+
+<Page {...fatFooterWaitingMeta(SITE_VARIABLES, lang, entry)}>
+  <FatFooterWaitingPage siteConfig={SITE_VARIABLES} lang={lang} entry={entry} />
+</Page>
