@@ -14,6 +14,7 @@ import defaultLogoSrc from '../assets/logo-myselion.png';
 import { contenu } from '../i18n/contenu';
 
 interface Props {
+  noindex?: boolean;
   title: string;
   description: string;
   image?: string;
@@ -26,7 +27,7 @@ interface Props {
 
 const lang = getLocaleFromPathname(Astro.url.pathname);
 
-// Libellés des entrées de menu et du fatfooter traduits (le shell ne rend que les valeurs).
+// Libellés des entrées de menu traduits (le shell ne rend que les valeurs).
 const menu: Record<string, string> = contenu(lang).menu;
 const tr = <T extends { name: string }>(entry: T): T => ({ ...entry, name: menu[entry.name] ?? entry.name });
 const siteConfig = {
@@ -35,10 +36,7 @@ const siteConfig = {
   service: SITE_VARIABLES.service.map(tr),
   objectif: SITE_VARIABLES.objectif.map(tr),
   headerCta: SITE_VARIABLES.headerCta && tr(SITE_VARIABLES.headerCta),
-  fatFooter: SITE_VARIABLES.fatFooter?.map((group) => ({
-    title: menu[group.title] ?? group.title,
-    links: group.links.map(tr),
-  })),
+  // Fatfooter : libellés figés par le shell, le site ne fournit que les cibles.
 };
 ---
 

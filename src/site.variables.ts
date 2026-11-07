@@ -85,39 +85,13 @@ export const SITE_VARIABLES: SiteConfig = {
   // « Se connecter » : accès à la plateforme (app.myselion.net ; l'ancien /web/login Odoo répond 404 depuis la bascule, 30/10/2026).
   headerCta: { name: "Se connecter", slug: "https://app.myselion.net/login" },
 
-  fatFooter: [
-    {
-      title: "mySelion",
-      links: [
-        { name: "Modules", slug: "/#modules" },
-        { name: "Offres", slug: "/#offres" },
-        { name: "Atouts", slug: "/#atouts" },
-        { name: "Démonstration", slug: "https://calendar.app.google/HaY66yydHRhzNKVN8" },
-        { name: "Contact", slug: "/contact/" },
-      ],
-    },
-    {
-      title: "Ressources",
-      links: [
-        { name: "Casus", slug: "/blog/?categorie=casus" },
-        { name: "Tutoriels", slug: "/blog/?categorie=tutoriels" },
-        { name: "Communauté", slug: "/blog/?categorie=communaute" },
-        { name: "Programme Partenaire #spread", slug: "/blog/programme-partenaire-spread/" },
-      ],
-    },
-    {
-      title: "Légal",
-      links: [
-        { name: "CLUF", slug: "/legal/cluf/" },
-      ],
-    },
-    {
-      title: "GROUPE SELION",
-      links: [
-        { name: "GROUPE SELION", slug: "https://selion.be" },
-      ],
-    },
-  ],
+  // Fatfooter commun du shell (07/11/2026) : 5 colonnes × 3 entrées figées ; le site ne
+  // fournit que les cibles. Entrée absente = page d'attente standard du shell
+  // (/<langue>/fatfooter/<slug>/, noindex, hors sitemap).
+  fatFooter: {
+    actualites: "/blog",
+    partenaire: "/blog/programme-partenaire-spread",
+  },
 };
 
 export const ENTITY_NAME = SITE_VARIABLES.legalDenomination ?? `${SITE_VARIABLES.title} ${SITE_VARIABLES.legalForm}`;
