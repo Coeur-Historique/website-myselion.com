@@ -90,13 +90,15 @@ export const SITE_VARIABLES: SiteConfig = {
   // (/<langue>/fatfooter/<slug>/, noindex, hors sitemap).
   // Barre certifications du shell (Laurent, 12/11/2026) : une seule ligne fine de logos, juste avant le footer.
   certifications: [
-    { src: "/certifications/gdpr.webp", alt: "GDPR Compliant", width: 96, height: 96 },
-    { src: "/certifications/nis2.webp", alt: "NIS2 Compliant", width: 96, height: 96 },
-    { src: "/certifications/iso-9001.webp", alt: "ISO 9001 Compliant", width: 96, height: 96 },
-    { src: "/certifications/iso-27001.webp", alt: "ISO 27001 Compliant", width: 96, height: 96 },
-    { src: "/certifications/peppol.webp", alt: "PEPPOL Ready", width: 96, height: 96 },
+    { src: "/certifications/gdpr.webp", alt: "GDPR Compliant", width: 96, height: 96, standard: "gdpr" },
+    { src: "/certifications/nis2.webp", alt: "NIS2 Compliant", width: 96, height: 96, standard: "nis2" },
+    { src: "/certifications/iso-9001.webp", alt: "ISO 9001 Compliant", width: 96, height: 96, standard: "iso-9001" },
+    { src: "/certifications/iso-27001.webp", alt: "ISO 27001 Compliant", width: 96, height: 96, standard: "iso-27001" },
+    { src: "/certifications/peppol.webp", alt: "PEPPOL Ready", width: 96, height: 96, standard: "peppol" },
   ],
   fatFooter: {
+    // Page Agrément commune du shell (Laurent, 12/11/2026) : cible de la barre certifications.
+    agrement: "/agrement",
     actualites: "/blog",
     partenaire: "/blog/programme-partenaire-spread",
   },

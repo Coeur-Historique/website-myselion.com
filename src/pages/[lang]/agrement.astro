@@ -1,0 +1,23 @@
+---
+// Page « Agrément » commune (shell, demande de Laurent du 12/11/2026, modèle : CHAR-LI) : cible de
+// l'entrée Agrément du fatfooter et de la barre certifications (fatFooter.agrement). Une carte par
+// logo de SITE_VARIABLES.certifications ; mise en page et textes standard fournis par le shell.
+import Page from '../../layouts/Page.astro';
+import {
+  AgrementPage,
+  accreditationPaths,
+  createAccreditationPage,
+} from '@coeur-historique/website-shell/agrement';
+import { SITE_VARIABLES } from '../../site.variables';
+
+export function getStaticPaths() {
+  return accreditationPaths(SITE_VARIABLES);
+}
+
+const { lang } = Astro.props;
+const { meta } = createAccreditationPage(SITE_VARIABLES, lang);
+---
+
+<Page title={meta.title} description={meta.description}>
+  <AgrementPage siteConfig={SITE_VARIABLES} lang={lang} />
+</Page>
