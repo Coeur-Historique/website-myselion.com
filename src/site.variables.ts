@@ -88,6 +88,14 @@ export const SITE_VARIABLES: SiteConfig = {
   // Fatfooter commun du shell (07/11/2026) : 5 colonnes × 3 entrées figées ; le site ne
   // fournit que les cibles. Entrée absente = page d'attente standard du shell
   // (/<langue>/fatfooter/<slug>/, noindex, hors sitemap).
+  // Barre certifications du shell (Laurent, 12/11/2026) : une seule ligne fine de logos, juste avant le footer.
+  certifications: [
+    { src: "/certifications/gdpr.webp", alt: "GDPR Compliant", width: 96, height: 96 },
+    { src: "/certifications/nis2.webp", alt: "NIS2 Compliant", width: 96, height: 96 },
+    { src: "/certifications/iso-9001.webp", alt: "ISO 9001 Compliant", width: 96, height: 96 },
+    { src: "/certifications/iso-27001.webp", alt: "ISO 27001 Compliant", width: 96, height: 96 },
+    { src: "/certifications/peppol.webp", alt: "PEPPOL Ready", width: 96, height: 96 },
+  ],
   fatFooter: {
     actualites: "/blog",
     partenaire: "/blog/programme-partenaire-spread",
