@@ -4,6 +4,7 @@ import icon from 'astro-icon';
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import shellSitemapNoindex from '@coeur-historique/website-shell/tooling/sitemap-noindex';
+import seoShare from '@coeur-historique/website-shell/tooling/seo-share';
 
 // Repo-modele (contenu) pour un nouveau site du groupe -- voir README.md pour la
 // procedure complete de mise en route. Base sur website-coeur-historique.be
@@ -42,6 +43,7 @@ export default defineConfig({
     purgecss(),
     // Après sitemap() : retire du sitemap les pages noindex (pages d'attente du fatfooter).
     shellSitemapNoindex(),
+    seoShare(),
   ],
   build: {
     inlineStylesheets: 'always',
