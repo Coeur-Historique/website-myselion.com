@@ -16,7 +16,26 @@
     "beta": "BETA",
     "familles": [
       {
+        "nom": "Tiers",
+        "couleur": "#4370AF",
+        "modules": [
+          [
+            "Clients",
+            "fa6-solid:circle-user"
+          ],
+          [
+            "Fournisseurs",
+            "fa6-solid:user-tie"
+          ],
+          [
+            "Contacts",
+            "fa6-solid:address-card"
+          ]
+        ]
+      },
+      {
         "nom": "Ventes",
+        "couleur": "#0C7C70",
         "modules": [
           [
             "Devis",
@@ -54,6 +73,7 @@
       },
       {
         "nom": "Achats",
+        "couleur": "#B45309",
         "modules": [
           [
             "Achats",
@@ -71,24 +91,62 @@
       },
       {
         "nom": "Stock",
+        "couleur": "#C2410C",
         "modules": [
-          [
-            "Inventaire",
-            "fa6-solid:cube"
-          ],
           [
             "Stock",
             "fa6-solid:cubes"
+          ],
+          [
+            "Inventaire",
+            "fa6-solid:cube"
+          ]
+        ]
+      },
+      {
+        "nom": "Opérations",
+        "couleur": "#7C3AED",
+        "modules": [
+          [
+            "Pointage",
+            "fa6-solid:clock"
+          ],
+          [
+            "Processus Custom",
+            "fa6-solid:diagram-project"
+          ],
+          [
+            "QR Dynamique",
+            "fa6-solid:qrcode"
+          ],
+          [
+            "Courriers",
+            "fa6-solid:envelope"
+          ],
+          [
+            "myS in App",
+            "fa6-solid:forward"
+          ]
+        ]
+      },
+      {
+        "nom": "Paie",
+        "couleur": "#D02370",
+        "modules": [
+          [
+            "Payroll",
+            "fa6-solid:face-smile"
+          ],
+          [
+            "Dirigeants",
+            "fa6-solid:rocket"
           ]
         ]
       },
       {
         "nom": "Comptabilité et fiscalité",
+        "couleur": "#2E4C77",
         "modules": [
-          [
-            "Historique",
-            "fa6-solid:link-slash"
-          ],
           [
             "Justificatifs clients",
             "fa6-solid:file-pdf"
@@ -118,67 +176,38 @@
             "fa6-solid:layer-group"
           ],
           [
+            "ISOC",
+            "fa6-solid:chart-pie"
+          ],
+          [
             "Solde",
             "fa6-solid:table-columns"
           ],
           [
-            "ISOC",
-            "fa6-solid:chart-pie"
-          ]
-        ]
-      },
-      {
-        "nom": "Paie",
-        "modules": [
-          [
-            "Payroll",
-            "fa6-solid:face-smile"
-          ],
-          [
-            "Dirigeants",
-            "fa6-solid:rocket"
-          ]
-        ]
-      },
-      {
-        "nom": "Opérations",
-        "modules": [
-          [
-            "Pointage",
-            "fa6-solid:clock"
-          ],
-          [
-            "QR Dynamique",
-            "fa6-solid:qrcode"
-          ],
-          [
-            "Courriers",
-            "fa6-solid:envelope"
-          ],
-          [
-            "Processus Custom",
-            "fa6-solid:diagram-project"
-          ],
-          [
-            "myS in App",
-            "fa6-solid:forward"
+            "Historique",
+            "fa6-solid:link-slash"
           ]
         ]
       },
       {
         "nom": "Administration",
+        "couleur": "#617087",
         "modules": [
           [
             "Administration",
             "fa6-solid:unlock-keyhole"
           ],
           [
+            "Agents",
+            "fa6-solid:user"
+          ],
+          [
             "Catégories",
             "fa6-solid:table-list"
           ],
           [
-            "Agents",
-            "fa6-solid:user"
+            "IBAN",
+            "fa6-solid:building-columns"
           ],
           [
             "Fleet",
@@ -187,22 +216,6 @@
           [
             "Points d'intérêt",
             "fa6-solid:location-dot"
-          ],
-          [
-            "IBAN",
-            "fa6-solid:building-columns"
-          ],
-          [
-            "Contacts",
-            "fa6-solid:address-card"
-          ],
-          [
-            "Fournisseurs",
-            "fa6-solid:user-tie"
-          ],
-          [
-            "Clients",
-            "fa6-solid:circle-user"
           ]
         ]
       }

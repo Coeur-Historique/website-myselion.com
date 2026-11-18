@@ -45,28 +45,29 @@ const date = (d: Date) => d.toLocaleDateString(`${lang}-BE`, { day: 'numeric', m
   ctaSecondaireHref="#offres"
 />
 
-<section class="py-5 ancre" id="modules">
+<section class="py-5 ancre modules" id="modules">
   <div class="container">
     <h2 class="titre-section text-center">{L.modules.titre}</h2>
     <p class="intro text-center">{L.modules.intro}</p>
-    <div class="row g-3">
-      {L.modules.familles.map((f) => (
-        <div class="col-md-6 col-lg-4">
-          <article class="famille">
-            <h3>{f.nom}</h3>
-            <ul>
-              {f.modules.map(([nom, icone]) => (
-                <li>
-                  <Icon name={icone} aria-hidden="true" />
-                  {nom}
-                  {nom === 'myS in App' && <span class="beta">{L.modules.beta}</span>}
-                </li>
-              ))}
-            </ul>
-          </article>
-        </div>
-      ))}
-    </div>
+    {L.modules.familles.map((f, i) => (
+      <div class="famille-modules" style={`--famille:${f.couleur}`}>
+        <h3 class="famille-titre">{i + 1} · {f.nom}</h3>
+        <ul class="tuiles">
+          {f.modules.map(([nom, icone]) => (
+            <li class="module">
+              <span class="module-tuile" aria-hidden="true">
+                <span class="pastille"></span>
+                <Icon name={icone} />
+              </span>
+              <span class="module-nom">
+                {nom}
+                {nom === 'myS in App' && <span class="beta">{L.modules.beta}</span>}
+              </span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    ))}
   </div>
 </section>
 
@@ -223,7 +224,6 @@ const date = (d: Date) => d.toLocaleDateString(`${lang}-BE`, { day: 'numeric', m
     margin: 0 auto 2rem;
     color: #475569;
   }
-  .famille,
   .offre,
   .une {
     height: 100%;
@@ -231,39 +231,90 @@ const date = (d: Date) => d.toLocaleDateString(`${lang}-BE`, { day: 'numeric', m
     border-radius: 1.25rem;
     background: #fff;
   }
-  .famille {
-    padding: 1.4rem;
-  }
-  .famille h3 {
-    font-size: 1.1rem;
-    font-weight: 800;
-    color: #2e4c77;
-  }
-  .famille ul,
   .coches {
     list-style: none;
     padding: 0;
     margin: 0;
   }
-  .famille li {
-    display: flex;
-    gap: 0.6rem;
-    align-items: center;
-    padding: 0.3rem 0;
+  /* Modules : grille de tuiles (8 colonnes ordinateur, 4 tablette, 3 mobile). */
+  .modules {
+    background: #f3f5f8;
   }
-  .famille li :global(svg) {
-    width: 1.1rem;
-    height: 1.1rem;
-    color: #4877b9;
-    flex: none;
+  .famille-modules + .famille-modules {
+    margin-top: 2.25rem;
   }
-  .beta {
-    font-size: 0.7rem;
+  /* Couleurs de famille assombries si besoin pour le contraste AA sur #F3F5F8. */
+  .famille-titre {
+    margin-bottom: 1rem;
+    font-size: 1.15rem;
     font-weight: 800;
-    padding: 0.05rem 0.4rem;
-    border-radius: 0.3rem;
-    background: #114b5f;
-    color: #fff;
+    color: var(--famille);
+  }
+  .tuiles {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem 0.75rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .module {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.55rem;
+    text-align: center;
+  }
+  .module-tuile {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 76px;
+    height: 76px;
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: 0 4px 14px rgba(46, 76, 119, 0.1);
+    overflow: hidden;
+  }
+  .pastille {
+    position: absolute;
+    top: 9px;
+    left: 9px;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: color-mix(in srgb, var(--famille) 16%, transparent);
+  }
+  .module-tuile :global(svg) {
+    position: relative;
+    width: 34px;
+    height: 34px;
+    color: var(--famille);
+  }
+  .module-nom {
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.3;
+    color: #1e293b;
+  }
+  /* Mention BETA en simple texte (règle du shell : aucun texte dans des bulles). */
+  .beta {
+    display: block;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    color: var(--famille);
+  }
+  @media (min-width: 768px) {
+    .tuiles {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+  @media (min-width: 992px) {
+    .tuiles {
+      grid-template-columns: repeat(8, minmax(0, 1fr));
+    }
   }
   .bande {
     background: #f2f0f5;
