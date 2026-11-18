@@ -1,0 +1,209 @@
+---
+// Bannière d'accueil mySelion (18/11/2026), sur le modèle de la bannière d'accueil de CHAR-LI
+// (website-charli.world, src/components/blocs/BlocHeroAccueil.astro) : texte à gauche, photo à
+// droite fondue vers le texte ; sur mobile, photo en haut fondue vers le bas puis texte.
+// Adaptation : image sombre, donc fondu vers le bleu nuit de l'image (#0b1020) et texte en blanc.
+// Une seule image (pas de carrousel). Textes, h1 et boutons repris de la bannière précédente
+// (src/i18n/contenu/fr.json, clé « hero ») : aucun texte ajouté. Pas de ligne d'avis Google.
+// data-shell-region="page-banner" : repère de la bannière de page pour validate-output du shell.
+import { Image } from 'astro:assets';
+import heroImage from '../../assets/accueil/hero-centralisation-diffusion.jpg';
+
+interface Props {
+  titre: string;
+  sousTitre: string;
+  badge: string;
+  cta: string;
+  ctaHref: string;
+  ctaSecondaire: string;
+  ctaSecondaireHref: string;
+}
+
+const { titre, sousTitre, badge, cta, ctaHref, ctaSecondaire, ctaSecondaireHref } = Astro.props;
+---
+
+<section class="hero-accueil" data-shell-region="page-banner" aria-labelledby="hero-accueil-titre">
+  <div class="hero-media">
+    <Image
+      src={heroImage}
+      alt="Flux de données centralisés par un entonnoir puis diffusés en anneaux lumineux"
+      widths={[640, 960, 1280, 1920]}
+      sizes="(min-width: 992px) 62vw, 100vw"
+      loading="eager"
+      fetchpriority="high"
+      decoding="sync"
+    />
+  </div>
+
+  <div class="container hero-contenu">
+    <div class="hero-texte">
+      <h1 id="hero-accueil-titre">{titre}</h1>
+      <p class="hero-lead">{sousTitre}</p>
+      <p class="hero-badge">{badge}</p>
+      <div class="hero-boutons">
+        <a class="hero-btn hero-btn-plein" href={ctaHref} target="_blank" rel="noopener noreferrer">{cta}</a>
+        <a class="hero-btn hero-btn-contour" href={ctaSecondaireHref}>{ctaSecondaire}</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero-accueil {
+    --hero-nuit: #0b1020;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    background: var(--hero-nuit);
+    color: #fff;
+  }
+  .hero-media {
+    position: relative;
+    aspect-ratio: 16 / 10;
+    max-height: 46vh;
+    width: 100%;
+  }
+  .hero-media img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Cadrage sur l'entonnoir (centre de l'image). */
+    object-position: 50% 45%;
+  }
+  /* Mobile : fondu vers le bleu nuit en bas de la photo, le texte suit sur fond bleu nuit. */
+  .hero-media::after {
+    content: '';
+    position: absolute;
+    inset: auto 0 0 0;
+    height: 35%;
+    background: linear-gradient(to top, var(--hero-nuit), rgba(11, 16, 32, 0));
+    pointer-events: none;
+  }
+
+  .hero-contenu {
+    position: relative;
+    z-index: 1;
+    padding-top: 0.5rem;
+    padding-bottom: 2.75rem;
+  }
+  .hero-texte {
+    max-width: 42rem;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .hero-accueil h1 {
+    margin: 0;
+    font-size: clamp(2.25rem, 1.2rem + 3.6vw, 4rem);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    color: #fff;
+    text-wrap: balance;
+  }
+  .hero-lead {
+    margin: 1.25rem auto 0;
+    font-size: 1.35rem;
+    line-height: 1.5;
+    color: #e2e8f0;
+  }
+  .hero-badge {
+    margin: 0.75rem 0 0;
+    font-weight: 700;
+    color: #fff;
+  }
+  .hero-boutons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 2rem;
+  }
+  .hero-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 3.25rem;
+    padding: 0 1.75rem;
+    border-radius: 999px;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1;
+    text-decoration: none;
+    transition: background-color 0.18s, border-color 0.18s, color 0.18s;
+  }
+  /* #4877B9 avec texte blanc : contraste 4,55:1 (AA). */
+  .hero-btn-plein {
+    border: 2px solid #4877b9;
+    background: #4877b9;
+    color: #fff;
+  }
+  .hero-btn-plein:hover {
+    border-color: #2e4c77;
+    background: #2e4c77;
+    color: #fff;
+  }
+  .hero-btn-contour {
+    border: 2px solid #fff;
+    background: transparent;
+    color: #fff;
+  }
+  .hero-btn-contour:hover {
+    background: #fff;
+    color: #0b1020;
+  }
+  .hero-btn:focus-visible {
+    outline: 3px solid #fff;
+    outline-offset: 3px;
+  }
+
+  @media (min-width: 576px) {
+    .hero-boutons {
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+
+  /* Desktop : photo à droite, fondue en bleu nuit vers le texte à gauche. */
+  @media (min-width: 992px) {
+    .hero-accueil {
+      display: flex;
+      align-items: center;
+      min-height: max(32rem, min(calc(100svh - 200px), 40rem));
+    }
+    .hero-media {
+      position: absolute;
+      inset: 0 0 0 auto;
+      width: 62%;
+      max-height: none;
+      aspect-ratio: auto;
+    }
+    .hero-media::after {
+      inset: 0;
+      height: auto;
+      background:
+        linear-gradient(90deg, var(--hero-nuit) 0%, rgba(11, 16, 32, 0.9) 12%, rgba(11, 16, 32, 0.45) 32%, rgba(11, 16, 32, 0) 55%),
+        linear-gradient(to top, var(--hero-nuit) 0%, rgba(11, 16, 32, 0) 15%);
+    }
+    .hero-contenu {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+    .hero-texte {
+      max-width: 36rem;
+      margin: 0;
+      text-align: left;
+    }
+    .hero-lead {
+      margin-left: 0;
+    }
+    .hero-boutons {
+      justify-content: flex-start;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-btn {
+      transition: none;
+    }
+  }
+</style>

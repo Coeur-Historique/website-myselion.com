@@ -12,6 +12,7 @@ import { contenu } from '../../i18n/contenu';
 import apercu from '../../assets/accueil/apercu.png';
 import spread from '../../assets/accueil/spread.webp';
 import readySetGo from '../../assets/accueil/ready-set-go.webp';
+import BlocHeroAccueil from './BlocHeroAccueil.astro';
 
 interface Props {
   lang: Locale;
@@ -34,17 +35,15 @@ const derniers = (await getCollection('blog', (a) => getBlogEntryLocale(a.id) ==
 const date = (d: Date) => d.toLocaleDateString(`${lang}-BE`, { day: 'numeric', month: 'long', year: 'numeric' });
 ---
 
-<section class="hero">
-  <div class="container py-5 text-center">
-    <h1>{L.hero.titre}</h1>
-    <p class="sous-titre">{L.hero.sousTitre}</p>
-    <p class="badge-hero"><Icon name="fa6-solid:bolt" aria-hidden="true" /> {L.hero.badge}</p>
-    <div class="d-flex flex-wrap gap-2 justify-content-center">
-      <a class="btn-mys" href={agenda} target="_blank" rel="noopener noreferrer">{L.hero.cta}</a>
-      <a class="btn-mys btn-mys-contour" href="#offres">{L.hero.ctaSecondaire}</a>
-    </div>
-  </div>
-</section>
+<BlocHeroAccueil
+  titre={L.hero.titre}
+  sousTitre={L.hero.sousTitre}
+  badge={L.hero.badge}
+  cta={L.hero.cta}
+  ctaHref={agenda}
+  ctaSecondaire={L.hero.ctaSecondaire}
+  ctaSecondaireHref="#offres"
+/>
 
 <section class="py-5 ancre" id="modules">
   <div class="container">
@@ -200,29 +199,6 @@ const date = (d: Date) => d.toLocaleDateString(`${lang}-BE`, { day: 'numeric', m
   .ancre {
     scroll-margin-top: 6rem;
   }
-  .hero {
-    background: linear-gradient(135deg, #2e4c77, #4877b9);
-    color: #fff;
-  }
-  .hero h1 {
-    font-weight: 800;
-    font-size: clamp(2rem, 5vw, 3.4rem);
-    max-width: 48rem;
-    margin: 1rem auto 0.5rem;
-  }
-  .sous-titre {
-    font-size: 1.35rem;
-    opacity: 0.9;
-  }
-  .badge-hero {
-    display: inline-flex;
-    gap: 0.5rem;
-    align-items: center;
-    padding: 0.4rem 1rem;
-    border-radius: 999px;
-    background: rgba(255, 255, 255, 0.15);
-    font-weight: 700;
-  }
   .btn-mys {
     display: inline-block;
     padding: 0.7rem 1.4rem;
@@ -233,13 +209,7 @@ const date = (d: Date) => d.toLocaleDateString(`${lang}-BE`, { day: 'numeric', m
     color: #fff;
     border: 2px solid #4877b9;
   }
-  .hero .btn-mys {
-    background: #fff;
-    color: #2e4c77;
-    border-color: #fff;
-  }
-  .btn-mys-contour,
-  .hero .btn-mys-contour {
+  .btn-mys-contour {
     background: transparent;
     color: inherit;
   }
