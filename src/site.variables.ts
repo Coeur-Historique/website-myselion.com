@@ -18,7 +18,8 @@ export const SITE_VARIABLES: SiteConfig = {
   domain: "https://www.myselion.com",
   // Ancien site en français uniquement.
   locales: ["fr"],
-  ogImageUrl: "https://www.myselion.com/favicon-myselion.png",
+  // Image de partage : flux de données centralisés par un entonnoir puis diffusés en anneaux (sens du logo mySelion), image générée avec Canva, 18/11/2026.
+  ogImageUrl: "https://www.myselion.com/og-image.jpg",
 
   analytics: {
     gaMeasurementId: "",
