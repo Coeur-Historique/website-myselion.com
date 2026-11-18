@@ -14,211 +14,202 @@
     "titre": "Tous les modules dont votre entreprise a besoin",
     "intro": "Une seule plateforme, sans option payante : chaque module est inclus.",
     "beta": "BETA",
-    "familles": [
-      {
-        "nom": "Tiers",
-        "couleur": "#4370AF",
-        "modules": [
-          [
-            "Clients",
-            "fa6-solid:circle-user"
-          ],
-          [
-            "Fournisseurs",
-            "fa6-solid:user-tie"
-          ],
-          [
-            "Contacts",
-            "fa6-solid:address-card"
-          ]
-        ]
-      },
-      {
-        "nom": "Ventes",
-        "couleur": "#0C7C70",
-        "modules": [
-          [
-            "Devis",
-            "fa6-solid:file-lines"
-          ],
-          [
-            "Ventes système",
-            "fa6-solid:gears"
-          ],
-          [
-            "Ventes récurrentes",
-            "fa6-solid:calendar-days"
-          ],
-          [
-            "Vente inventorisée",
-            "fa6-solid:list-ul"
-          ],
-          [
-            "Factures",
-            "fa6-solid:chart-line"
-          ],
-          [
-            "Notes de crédit",
-            "fa6-solid:file-invoice"
-          ],
-          [
-            "Caisse",
-            "fa6-solid:euro-sign"
-          ],
-          [
-            "Régie",
-            "fa6-solid:life-ring"
-          ]
-        ]
-      },
-      {
-        "nom": "Achats",
-        "couleur": "#B45309",
-        "modules": [
-          [
-            "Achats",
-            "fa6-solid:cart-arrow-down"
-          ],
-          [
-            "Avoirs",
-            "fa6-solid:file-invoice"
-          ],
-          [
-            "Notes de frais",
-            "fa6-solid:ticket"
-          ]
-        ]
-      },
-      {
-        "nom": "Stock",
-        "couleur": "#C2410C",
-        "modules": [
-          [
-            "Stock",
-            "fa6-solid:cubes"
-          ],
-          [
-            "Inventaire",
-            "fa6-solid:cube"
-          ]
-        ]
-      },
-      {
-        "nom": "Opérations",
-        "couleur": "#7C3AED",
-        "modules": [
-          [
-            "Pointage",
-            "fa6-solid:clock"
-          ],
-          [
-            "Processus Custom",
-            "fa6-solid:diagram-project"
-          ],
-          [
-            "QR Dynamique",
-            "fa6-solid:qrcode"
-          ],
-          [
-            "Courriers",
-            "fa6-solid:envelope"
-          ],
-          [
-            "myS in App",
-            "fa6-solid:forward"
-          ]
-        ]
-      },
-      {
-        "nom": "Paie",
-        "couleur": "#D02370",
-        "modules": [
-          [
-            "Payroll",
-            "fa6-solid:face-smile"
-          ],
-          [
-            "Dirigeants",
-            "fa6-solid:rocket"
-          ]
-        ]
-      },
-      {
-        "nom": "Comptabilité et fiscalité",
-        "couleur": "#2E4C77",
-        "modules": [
-          [
-            "Justificatifs clients",
-            "fa6-solid:file-pdf"
-          ],
-          [
-            "Justificatifs fournisseurs",
-            "fa6-solid:file-pdf"
-          ],
-          [
-            "Flux bancaires",
-            "fa6-solid:money-bill"
-          ],
-          [
-            "Opérations diverses",
-            "fa6-solid:right-left"
-          ],
-          [
-            "Financiers",
-            "fa6-solid:shuffle"
-          ],
-          [
-            "Balances",
-            "fa6-solid:scale-balanced"
-          ],
-          [
-            "TVA",
-            "fa6-solid:layer-group"
-          ],
-          [
-            "ISOC",
-            "fa6-solid:chart-pie"
-          ],
-          [
-            "Solde",
-            "fa6-solid:table-columns"
-          ],
-          [
-            "Historique",
-            "fa6-solid:link-slash"
-          ]
-        ]
-      },
-      {
-        "nom": "Administration",
-        "couleur": "#617087",
-        "modules": [
-          [
-            "Administration",
-            "fa6-solid:unlock-keyhole"
-          ],
-          [
-            "Agents",
-            "fa6-solid:user"
-          ],
-          [
-            "Catégories",
-            "fa6-solid:table-list"
-          ],
-          [
-            "IBAN",
-            "fa6-solid:building-columns"
-          ],
-          [
-            "Fleet",
-            "fa6-solid:car"
-          ],
-          [
-            "Points d'intérêt",
-            "fa6-solid:location-dot"
-          ]
-        ]
-      }
+    "liste": [
+      [
+        "Administration",
+        "fa6-solid:sliders",
+        "#64748B"
+      ],
+      [
+        "Catégories",
+        "fa6-solid:tags",
+        "#64748B"
+      ],
+      [
+        "Agents",
+        "fa6-solid:id-badge",
+        "#64748B"
+      ],
+      [
+        "IBAN",
+        "fa6-solid:building-columns",
+        "#64748B"
+      ],
+      [
+        "Fleet",
+        "fa6-solid:car",
+        "#64748B"
+      ],
+      [
+        "Points d'intérêt",
+        "fa6-solid:location-dot",
+        "#64748B"
+      ],
+      [
+        "Clients",
+        "fa6-solid:users",
+        "#4877B9"
+      ],
+      [
+        "Fournisseurs",
+        "fa6-solid:truck",
+        "#4877B9"
+      ],
+      [
+        "Contacts",
+        "fa6-solid:address-card",
+        "#4877B9"
+      ],
+      [
+        "Stock",
+        "fa6-solid:warehouse",
+        "#C2410C"
+      ],
+      [
+        "Inventaire",
+        "fa6-solid:clipboard-check",
+        "#C2410C"
+      ],
+      [
+        "Devis",
+        "fa6-solid:file-signature",
+        "#0F9F90"
+      ],
+      [
+        "Ventes système",
+        "fa6-solid:gears",
+        "#0F9F90"
+      ],
+      [
+        "Ventes récurrentes",
+        "fa6-solid:repeat",
+        "#0F9F90"
+      ],
+      [
+        "Vente inventorisée",
+        "fa6-solid:barcode",
+        "#0F9F90"
+      ],
+      [
+        "Factures",
+        "fa6-solid:file-invoice",
+        "#0F9F90"
+      ],
+      [
+        "Notes de crédit",
+        "fa6-solid:file-circle-minus",
+        "#0F9F90"
+      ],
+      [
+        "Caisse",
+        "fa6-solid:cash-register",
+        "#0F9F90"
+      ],
+      [
+        "Régie",
+        "fa6-solid:user-clock",
+        "#0F9F90"
+      ],
+      [
+        "Achats",
+        "fa6-solid:cart-arrow-down",
+        "#B45309"
+      ],
+      [
+        "Avoirs",
+        "fa6-solid:file-circle-minus",
+        "#B45309"
+      ],
+      [
+        "Notes de frais",
+        "fa6-solid:receipt",
+        "#B45309"
+      ],
+      [
+        "Pointage",
+        "fa6-solid:fingerprint",
+        "#7C3AED"
+      ],
+      [
+        "Processus Custom",
+        "fa6-solid:diagram-project",
+        "#7C3AED"
+      ],
+      [
+        "QR Dynamique",
+        "fa6-solid:qrcode",
+        "#7C3AED"
+      ],
+      [
+        "Courriers",
+        "fa6-solid:envelope-open-text",
+        "#7C3AED"
+      ],
+      [
+        "myS in App",
+        "fa6-solid:mobile-screen",
+        "#7C3AED"
+      ],
+      [
+        "Payroll",
+        "fa6-solid:money-check",
+        "#DB2777"
+      ],
+      [
+        "Dirigeants",
+        "fa6-solid:user-tie",
+        "#DB2777"
+      ],
+      [
+        "Justificatifs clients",
+        "fa6-solid:file-arrow-up",
+        "#2E4C77"
+      ],
+      [
+        "Justificatifs fournisseurs",
+        "fa6-solid:file-arrow-down",
+        "#2E4C77"
+      ],
+      [
+        "Flux bancaires",
+        "fa6-solid:money-bill-transfer",
+        "#2E4C77"
+      ],
+      [
+        "Opérations diverses",
+        "fa6-solid:book",
+        "#2E4C77"
+      ],
+      [
+        "Financiers",
+        "fa6-solid:shuffle",
+        "#2E4C77"
+      ],
+      [
+        "Balances",
+        "fa6-solid:scale-balanced",
+        "#2E4C77"
+      ],
+      [
+        "TVA",
+        "fa6-solid:percent",
+        "#2E4C77"
+      ],
+      [
+        "ISOC",
+        "fa6-solid:landmark",
+        "#2E4C77"
+      ],
+      [
+        "Solde",
+        "fa6-solid:calculator",
+        "#2E4C77"
+      ],
+      [
+        "Historique",
+        "fa6-solid:clock-rotate-left",
+        "#2E4C77"
+      ]
     ]
   },
   "simplifier": {

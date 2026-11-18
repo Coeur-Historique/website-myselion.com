@@ -49,25 +49,20 @@ const date = (d: Date) => d.toLocaleDateString(`${lang}-BE`, { day: 'numeric', m
   <div class="container">
     <h2 class="titre-section text-center">{L.modules.titre}</h2>
     <p class="intro text-center">{L.modules.intro}</p>
-    {L.modules.familles.map((f, i) => (
-      <div class="famille-modules" style={`--famille:${f.couleur}`}>
-        <h3 class="famille-titre">{i + 1} · {f.nom}</h3>
-        <ul class="tuiles">
-          {f.modules.map(([nom, icone]) => (
-            <li class="module">
-              <span class="module-tuile" aria-hidden="true">
-                <span class="pastille"></span>
-                <Icon name={icone} />
-              </span>
-              <span class="module-nom">
-                {nom}
-                {nom === 'myS in App' && <span class="beta">{L.modules.beta}</span>}
-              </span>
-            </li>
-          ))}
-        </ul>
-      </div>
-    ))}
+    <ul class="tuiles">
+      {L.modules.liste.map(([nom, icone, couleur]) => (
+        <li class="module" style={`--famille:${couleur}`}>
+          <span class="module-tuile" aria-hidden="true">
+            <span class="pastille"></span>
+            <Icon name={icone} />
+          </span>
+          <span class="module-nom">
+            {nom}
+            {nom === 'myS in App' && <span class="beta">{L.modules.beta}</span>}
+          </span>
+        </li>
+      ))}
+    </ul>
   </div>
 </section>
 
@@ -236,20 +231,12 @@ const date = (d: Date) => d.toLocaleDateString(`${lang}-BE`, { day: 'numeric', m
     padding: 0;
     margin: 0;
   }
-  /* Modules : grille de tuiles (8 colonnes ordinateur, 4 tablette, 3 mobile). */
+  /* Modules : grille continue de tuiles, ordre de création dans mySelion
+     (8 colonnes ordinateur, 4 tablette, 3 mobile). */
   .modules {
     background: #f3f5f8;
   }
-  .famille-modules + .famille-modules {
-    margin-top: 2.25rem;
-  }
-  /* Couleurs de famille assombries si besoin pour le contraste AA sur #F3F5F8. */
-  .famille-titre {
-    margin-bottom: 1rem;
-    font-size: 1.15rem;
-    font-weight: 800;
-    color: var(--famille);
-  }
+  /* Couleur de famille portée par chaque tuile (pastille et icône) ; icônes ≥ 3:1 sur blanc. */
   .tuiles {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
