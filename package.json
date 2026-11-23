@@ -11,7 +11,7 @@
   "dependencies": {
     "@astrojs/mdx": "^6.0.3",
     "@astrojs/sitemap": "^3.7.3",
-    "@coeur-historique/website-shell": "git+https://github.com/Coeur-Historique/website-admin-shell.git#6107395744d5ddf6de93fb2bb7895698fc98846e",
+    "@coeur-historique/website-shell": "git+https://github.com/Coeur-Historique/website-admin-shell.git#eeb0d25c7e8faa171b08e9213e0e16696f5aefb6",
     "@iconify-json/fa6-brands": "^1.1.2",
     "@iconify-json/fa6-solid": "^1.1.2",
     "@vercel/analytics": "^1.3.1",
